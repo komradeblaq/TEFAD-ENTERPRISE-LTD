@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Request a personalised quotation from TEFAD Enterprise Ltd for catering, cakes, small chops, decoration and event planning."
+  >
+
+  <meta name="author" content="TEFAD Enterprise Ltd">
+  <meta name="theme-color" content="#5b071b">
+
+  <meta property="og:title" content="Book TEFAD Enterprise Ltd">
+  <meta
+    property="og:description"
+    content="Complete our professional enquiry form and send your event details directly to TEFAD."
+  >
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:type" content="website">
+
+  <title>Book Us | TEFAD Enterprise Ltd</title>
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .inner-hero {
+      position: relative;
+      display: flex;
+      min-height: 500px;
+      padding: 180px 0 85px;
+      align-items: flex-end;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(39, 1, 11, 0.98),
+          rgba(73, 5, 23, 0.82)
+        ),
+        url("images/booking-hero.jpg") center/cover no-repeat;
+    }
+
+    .inner-hero::before {
+      position: absolute;
+      top: -260px;
+      right: -100px;
+      width: 650px;
+      height: 650px;
+      border: 1px solid rgba(212, 169, 79, 0.18);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .inner-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      margin-bottom: 20px;
+      gap: 10px;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .breadcrumbs a {
+      color: var(--gold-light);
+    }
+
+    .breadcrumbs i {
+      font-size: 0.55rem;
+    }
+
+    .inner-hero h1 {
+      color: var(--white);
+      font-size: clamp(3.6rem, 8vw, 6.4rem);
+      font-weight: 600;
+    }
+
+    .inner-hero h1 em {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    .inner-hero p {
+      max-width: 670px;
+      margin-top: 20px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .booking-section {
+      background: var(--ivory);
+    }
+
+    .booking-layout {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .booking-sidebar {
+      position: sticky;
+      top: 120px;
+    }
+
+    .sidebar-card {
+      padding: 38px 30px;
+      color: var(--white);
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(212, 169, 79, 0.2),
+          transparent 30%
+        ),
+        var(--burgundy);
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar-card img {
+      width: 95px;
+      height: 95px;
+      margin-bottom: 22px;
+      object-fit: contain;
+    }
+
+    .sidebar-card h2 {
+      color: var(--white);
+      font-size: 2.3rem;
+    }
+
+    .sidebar-card > p {
+      margin-top: 14px;
+      color: rgba(255, 255, 255, 0.67);
+      font-size: 0.82rem;
+    }
+
+    .booking-steps {
+      display: grid;
+      margin-top: 30px;
+      gap: 17px;
+    }
+
+    .booking-step {
+      display: flex;
+      gap: 13px;
+      align-items: flex-start;
+    }
+
+    .booking-step span {
+      display: flex;
+      min-width: 31px;
+      height: 31px;
+      align-items: center;
+      justify-content: center;
+      color: var(--burgundy-dark);
+      background: var(--gold);
+      border-radius: 50%;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+    }
+
+    .booking-step strong {
+      display: block;
+      color: var(--white);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.05rem;
+    }
+
+    .booking-step p {
+      color: rgba(255, 255, 255, 0.57);
+      font-size: 0.68rem;
+      line-height: 1.5;
+    }
+
+    .sidebar-contact {
+      margin-top: 24px;
+      padding: 25px;
+      background: var(--white);
+      border: 1px solid var(--light-grey);
+      box-shadow: 0 12px 35px rgba(40, 8, 15, 0.06);
+    }
+
+    .sidebar-contact h3 {
+      margin-bottom: 15px;
+      color: var(--burgundy);
+      font-size: 1.4rem;
+    }
+
+    .sidebar-contact a,
+    .sidebar-contact p {
+      display: flex;
+      margin-top: 11px;
+      gap: 11px;
+      align-items: flex-start;
+      color: var(--grey);
+      font-size: 0.74rem;
+    }
+
+    .sidebar-contact i {
+      width: 16px;
+      margin-top: 4px;
+      color: var(--gold-dark);
+    }
+
+    .booking-form-wrapper {
+      padding: 48px;
+      background: var(--white);
+      border-top: 4px solid var(--gold);
+      box-shadow: var(--shadow);
+    }
+
+    .form-heading {
+      margin-bottom: 35px;
+    }
+
+    .form-heading h2 {
+      font-size: clamp(2.3rem, 5vw, 3.5rem);
+    }
+
+    .form-heading p {
+      margin-top: 12px;
+      font-size: 0.82rem;
+    }
+
+    .form-progress {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 38px;
+    }
+
+    .progress-item {
+      position: relative;
+      padding-bottom: 13px;
+      color: #99918b;
+      border-bottom: 2px solid var(--light-grey);
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .progress-item.active {
+      color: var(--burgundy);
+      border-color: var(--gold);
+    }
+
+    .form-section {
+      margin-bottom: 34px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--light-grey);
+    }
+
+    .form-section:last-of-type {
+      border-bottom: 0;
+    }
+
+    .form-section-title {
+      display: flex;
+      margin-bottom: 21px;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .form-section-title span {
+      display: flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      background: var(--burgundy);
+      border-radius: 50%;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+    }
+
+    .form-section-title h3 {
+      color: var(--charcoal);
+      font-size: 1.45rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 21px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      margin-bottom: 8px;
+      color: var(--charcoal);
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .required {
+      color: #b51638;
+    }
+
+    .optional {
+      color: #928b86;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      min-height: 52px;
+      padding: 13px 15px;
+      color: var(--charcoal);
+      background: #fdfaf6;
+      border: 1px solid #ded7d0;
+      border-radius: 0;
+      outline: 0;
+      transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+    }
+
+    .form-group textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      background: var(--white);
+      border-color: var(--gold-dark);
+      box-shadow: 0 0 0 3px rgba(212, 169, 79, 0.13);
+    }
+
+    .form-group input.invalid,
+    .form-group select.invalid,
+    .form-group textarea.invalid {
+      border-color: #c62828;
+      background: #fff8f8;
+    }
+
+    .field-help,
+    .field-error {
+      margin-top: 6px;
+      font-size: 0.62rem;
+    }
+
+    .field-help {
+      color: #8a837e;
+    }
+
+    .field-error {
+      display: none;
+      color: #b51638;
+      font-weight: 700;
+    }
+
+    .field-error.show {
+      display: block;
+    }
+
+    .conditional-fields {
+      display: none;
+      margin-top: 22px;
+      padding: 25px;
+      background: var(--cream);
+      border-left: 3px solid var(--gold);
+    }
+
+    .conditional-fields.show {
+      display: block;
+      animation: formReveal 0.4s ease;
+    }
+
+    @keyframes formReveal {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .conditional-fields h4 {
+      margin-bottom: 18px;
+      color: var(--burgundy);
+      font-size: 1.25rem;
+    }
+
+    .checkbox-wrapper {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+    }
+
+    .checkbox-wrapper input {
+      width: 18px;
+      height: 18px;
+      margin-top: 4px;
+      accent-color: var(--burgundy);
+    }
+
+    .checkbox-wrapper label {
+      color: var(--grey);
+      font-size: 0.73rem;
+      line-height: 1.6;
+    }
+
+    .form-message {
+      display: none;
+      margin-bottom: 20px;
+      padding: 15px;
+      gap: 10px;
+      align-items: center;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .form-message.error {
+      display: flex;
+      color: #921830;
+      background: #fff0f3;
+      border: 1px solid #efbdc8;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .whatsapp-submit {
+      display: inline-flex;
+      min-height: 58px;
+      padding: 15px 28px;
+      gap: 11px;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      background: #159653;
+      border: 1px solid #159653;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition:
+        transform var(--transition),
+        background var(--transition);
+    }
+
+    .whatsapp-submit:hover {
+      background: #0e7e44;
+      transform: translateY(-3px);
+    }
+
+    .whatsapp-submit i {
+      font-size: 1.3rem;
+    }
+
+    .reset-button {
+      padding: 13px;
+      color: var(--grey);
+      background: transparent;
+      font-size: 0.67rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .reset-button:hover {
+      color: var(--burgundy);
+    }
+
+    .privacy-note {
+      display: flex;
+      margin-top: 20px;
+      gap: 9px;
+      align-items: flex-start;
+      color: #8a837e;
+      font-size: 0.62rem;
+    }
+
+    .privacy-note i {
+      margin-top: 3px;
+      color: var(--gold-dark);
+    }
+
+    @media (max-width: 950px) {
+      .booking-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .sidebar-contact {
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .inner-hero {
+        min-height: 450px;
+        padding: 150px 0 65px;
+      }
+
+      .booking-sidebar,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-form-wrapper {
+        padding: 35px 20px;
+      }
+
+      .form-progress {
+        display: none;
+      }
+
+      .conditional-fields {
+        padding: 22px 15px;
+      }
+
+      .form-actions {
+        flex-direction: column-reverse;
+      }
+
+      .whatsapp-submit,
+      .reset-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="preloader" id="preloader">
+    <img src="images/logo.png" alt="TEFAD Enterprise Ltd logo">
+    <span>Preparing something exceptional...</span>
+  </div>
+
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Abuja Karu, Karu, Nigeria
+      </p>
+
+      <div class="top-contact">
+        <a href="tel:+2348154440684">
+          <i class="fa-solid fa-phone"></i>
+          +234 815 444 0684
+        </a>
+
+        <a href="mailto:tosinfaith4real@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          tosinfaith4real@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+
+        <div class="brand-text">
+          <strong>TEFAD</strong>
+          <span>Enterprise Ltd</span>
+        </div>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" id="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html" class="active">Book Us</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="booking.html" class="nav-cta">
+          Request a Quote
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="inner-hero">
+      <div class="container inner-hero-content">
+
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Book Us</span>
+        </div>
+
+        <h1>
+          Tell us about your
+          <em>special occasion.</em>
+        </h1>
+
+        <p>
+          Complete the simple form below. Your details will be arranged
+          professionally and sent directly to TEFAD on WhatsApp.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section booking-section">
+      <div class="container booking-layout">
+
+        <aside class="booking-sidebar reveal">
+          <div class="sidebar-card">
+            <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+
+            <h2>Simple booking. Personal service.</h2>
+
+            <p>
+              Give us the essential information and our team will
+              respond with recommendations, availability and pricing.
+            </p>
+
+            <div class="booking-steps">
+              <div class="booking-step">
+                <span>1</span>
+                <div>
+                  <strong>Complete the form</strong>
+                  <p>Tell us what you need.</p>
+                </div>
+              </div>
+
+              <div class="booking-step">
+                <span>2</span>
+                <div>
+                  <strong>Send to WhatsApp</strong>
+                  <p>Your details open as a prepared message.</p>
+                </div>
+              </div>
+
+              <div class="booking-step">
+                <span>3</span>
+                <div>
+                  <strong>Receive a response</strong>
+                  <p>We discuss availability and quotation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-contact">
+            <h3>Prefer direct contact?</h3>
+
+            <a href="https://wa.me/2348154440684">
+              <i class="fa-brands fa-whatsapp"></i>
+              +234 815 444 0684
+            </a>
+
+            <a href="tel:+2348036211935">
+              <i class="fa-solid fa-phone"></i>
+              +234 803 621 1935
+            </a>
+
+            <a href="mailto:tosinfaith4real@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              tosinfaith4real@gmail.com
+            </a>
+
+            <p>
+              <i class="fa-solid fa-location-dot"></i>
+              Abuja Karu, Karu, Nigeria
+            </p>
+          </div>
+        </aside>
+
+        <div class="booking-form-wrapper reveal">
+
+          <div class="form-heading">
+            <div class="section-tag">Service Enquiry</div>
+            <h2>Request a personalised quotation</h2>
+
+            <p>
+              Fields marked with an asterisk are required.
+            </p>
+          </div>
+
+          <div class="form-progress">
+            <div class="progress-item active">Your Details</div>
+            <div class="progress-item active">Service Details</div>
+            <div class="progress-item active">Send Enquiry</div>
+          </div>
+
+          <div class="form-message" id="formMessage">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span>Please complete all required fields.</span>
+          </div>
+
+          <form id="bookingForm" novalidate>
+
+            <div class="form-section">
+              <div class="form-section-title">
+                <span>1</span>
+                <h3>Your contact information</h3>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fullName">
+                    Full name <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                  >
+
+                  <small class="field-error">
+                    Please enter your full name.
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">
+                    Phone number <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+234..."
+                    autocomplete="tel"
+                    required
+                  >
+
+                  <small class="field-error">
+                    Please enter your phone number.
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">
+                    Email address
+                    <span class="optional">(optional)</span>
+                  </label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    autocomplete="email"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="contactMethod">
+                    Preferred response method
+                  </label>
+
+                  <select id="contactMethod" name="contactMethod">
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Phone Call">Phone call</option>
+                    <option value="Email">Email</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section-title">
+                <span>2</span>
+                <h3>Service information</h3>
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group full-width">
+                  <label for="service">
+                    Service required <span class="required">*</span>
+                  </label>
+
+                  <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="Catering">
+                      Catering Services
+                    </option>
+                    <option value="Cakes and Pastries">
+                      Cakes & Pastries
+                    </option>
+                    <option value="Small Chops">
+                      Small Chops
+                    </option>
+                    <option value="Event Decoration">
+                      Event Decoration
+                    </option>
+                    <option value="Event Planning">
+                      Event Planning
+                    </option>
+                    <option value="Corporate Event">
+                      Corporate Event
+                    </option>
+                    <option value="Custom Request">
+                      Custom Request
+                    </option>
+                  </select>
+
+                  <small class="field-error">
+                    Please select the service you require.
+                  </small>
+                </div>
+              </div>
+
+              <div
+                class="conditional-fields"
+                id="cakeFields"
+              >
+                <h4>Cake or pastry details</h4>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="cakeType">Type of order</label>
+
+                    <select id="cakeType">
+                      <option value="">Select an option</option>
+                      <option value="Birthday Cake">
+                        Birthday cake
+                      </option>
+                      <option value="Wedding Cake">
+                        Wedding cake
+                      </option>
+                      <option value="Anniversary Cake">
+                        Anniversary cake
+                      </option>
+                      <option value="Cupcakes">Cupcakes</option>
+                      <option value="Pastries">Pastries</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cakeSize">
+                      Preferred size or quantity
+                    </label>
+
+                    <input
+                      type="text"
+                      id="cakeSize"
+                      placeholder="Example: 10 inches or 50 pieces"
+                    >
+                  </div>
+
+                  <div class="form-group full-width">
+                    <label for="cakeDesign">
+                      Preferred design, flavour or colour
+                    </label>
+
+                    <textarea
+                      id="cakeDesign"
+                      placeholder="Describe the design, flavour, inscription or theme"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="conditional-fields"
+                id="cateringFields"
+              >
+                <h4>Catering details</h4>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="mealType">Meal service</label>
+
+                    <select id="mealType">
+                      <option value="">Select an option</option>
+                      <option value="Buffet">Buffet</option>
+                      <option value="Packed Meals">Packed meals</option>
+                      <option value="Table Service">Table service</option>
+                      <option value="Not Sure">Not sure yet</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="menuPreference">
+                      Menu preference
+                    </label>
+
+                    <input
+                      type="text"
+                      id="menuPreference"
+                      placeholder="Example: Nigerian dishes"
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="conditional-fields"
+                id="eventFields"
+              >
+                <h4>Event planning or decoration details</h4>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="eventTheme">Theme or colours</label>
+
+                    <input
+                      type="text"
+                      id="eventTheme"
+                      placeholder="Enter your theme or colours"
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="venueType">Venue status</label>
+
+                    <select id="venueType">
+                      <option value="">Select an option</option>
+                      <option value="Venue Confirmed">
+                        Venue confirmed
+                      </option>
+                      <option value="Still Searching">
+                        Still searching
+                      </option>
+                      <option value="Need Recommendation">
+                        Need a recommendation
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="conditional-fields"
+                id="smallChopsFields"
+              >
+                <h4>Small chops details</h4>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="smallChopsQuantity">
+                      Number of portions or packs
+                    </label>
+
+                    <input
+                      type="number"
+                      id="smallChopsQuantity"
+                      min="1"
+                      placeholder="Example: 50"
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="packaging">
+                      Packaging preference
+                    </label>
+
+                    <select id="packaging">
+                      <option value="">Select an option</option>
+                      <option value="Individual Packs">
+                        Individual packs
+                      </option>
+                      <option value="Event Trays">
+                        Event trays
+                      </option>
+                      <option value="Not Sure">
+                        Not sure yet
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section-title">
+                <span>3</span>
+                <h3>Occasion details</h3>
+              </div>
+
+               <div class="form-grid">
+                <div class="form-group">
+                  <label for="eventType">
+                    Occasion or event type
+                    <span class="required">*</span>
+                  </label>
+
+                  <select id="eventType" name="eventType" required>
+                    <option value="">Select occasion</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="Corporate Event">
+                      Corporate event
+                    </option>
+                    <option value="Religious Event">
+                      Religious event
+                    </option>
+                    <option value="Family Gathering">
+                      Family gathering
+                    </option>
+                    <option value="Private Order">
+                      Private order
+                    </option>
+                    <option value="Other">Other</option>
+                  </select>
+
+                  <small class="field-error">
+                    Please select your occasion.
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label for="eventDate">
+                    Preferred date <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="date"
+                    id="eventDate"
+                    name="eventDate"
+                    required
+                  >
+
+                  <small class="field-error">
+                    Please select your preferred date.
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label for="eventTime">
+                    Preferred time
+                    <span class="optional">(optional)</span>
+                  </label>
+
+                  <input
+                    type="time"
+                    id="eventTime"
+                    name="eventTime"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="guestCount">
+                    Estimated guests or quantity
+                    <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="number"
+                    id="guestCount"
+                    name="guestCount"
+                    min="1"
+                    placeholder="Example: 100"
+                    required
+                  >
+
+                  <small class="field-error">
+                    Please enter the estimated number.
+                  </small>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="location">
+                    Event or delivery location
+                    <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    placeholder="Enter the area, venue or delivery address"
+                    required
+                  >
+
+                  <small class="field-error">
+                    Please enter the location.
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label for="budget">
+                    Estimated budget
+                    <span class="optional">(optional)</span>
+                  </label>
+
+                  <select id="budget" name="budget">
+                    <option value="Not Specified">
+                      Prefer not to specify
+                    </option>
+                    <option value="Below ₦100,000">
+                      Below ₦100,000
+                    </option>
+                    <option value="₦100,000 - ₦300,000">
+                      ₦100,000 – ₦300,000
+                    </option>
+                    <option value="₦300,000 - ₦700,000">
+                      ₦300,000 – ₦700,000
+                    </option>
+                    <option value="₦700,000 - ₦1,500,000">
+                      ₦700,000 – ₦1,500,000
+                    </option>
+                    <option value="Above ₦1,500,000">
+                      Above ₦1,500,000
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="discovery">
+                    How did you hear about us?
+                  </label>
+
+                  <select id="discovery" name="discovery">
+                    <option value="Not Specified">
+                      Select an option
+                    </option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Google Search">Google search</option>
+                    <option value="Referral">Referral</option>
+                    <option value="Returning Customer">
+                      Returning customer
+                    </option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="message">
+                    Additional requirements
+                    <span class="optional">(optional)</span>
+                  </label>
+
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us about your preferred menu, design, theme or any special request"
+                  ></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                  <div class="checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      id="confirmation"
+                      required
+                    >
+
+                    <label for="confirmation">
+                      I confirm that the information provided is
+                      correct, and I understand that submitting this
+                      form is an enquiry—not a confirmed booking.
+                      <span class="required">*</span>
+                    </label>
+                  </div>
+
+                  <small class="field-error">
+                    Please confirm before submitting.
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-message" id="bottomFormMessage">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span>Please complete all required fields.</span>
+            </div>
+
+            <div class="form-actions">
+              <button
+                type="reset"
+                class="reset-button"
+                id="resetButton"
+              >
+                Clear Form
+              </button>
+
+              <button
+                type="submit"
+                class="whatsapp-submit"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+                Send Enquiry to WhatsApp
+              </button>
+            </div>
+
+            <div class="privacy-note">
+              <i class="fa-solid fa-lock"></i>
+
+              <span>
+                Your details are only used to respond to this service
+                enquiry. The form does not collect online payment.
+              </span>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">
+          <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+        </a>
+
+        <p>
+          Premium catering, cakes, pastries and event services created
+          to make every occasion exceptional.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://wa.me/2348154440684"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Book Us</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Services</h3>
+        <a href="services.html">Catering</a>
+        <a href="services.html">Cakes & Pastries</a>
+        <a href="services.html">Small Chops</a>
+        <a href="services.html">Decoration</a>
+        <a href="services.html">Event Planning</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contact</h3>
+
+        <a href="tel:+2348154440684">
+          <i class="fa-solid fa-phone"></i>
+          +234 815 444 0684
+        </a>
+
+        <a href="tel:+2348036211935">
+          <i class="fa-solid fa-phone"></i>
+          +234 803 621 1935
+        </a>
+
+        <a href="mailto:tosinfaith4real@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          tosinfaith4real@gmail.com
+        </a>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Abuja Karu, Karu, Nigeria
+        </p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        &copy; 2026 TEFAD Enterprise Ltd. All rights reserved.
+      </p>
+
+      <p>Exceptional taste. Unforgettable moments.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("bookingForm");
+      const serviceSelect = document.getElementById("service");
+      const eventDate = document.getElementById("eventDate");
+      const formMessage = document.getElementById("formMessage");
+      const bottomFormMessage =
+        document.getElementById("bottomFormMessage");
+
+      const conditionalSections = {
+        cateringFields:
+          document.getElementById("cateringFields"),
+
+        cakeFields:
+          document.getElementById("cakeFields"),
+
+        smallChopsFields:
+          document.getElementById("smallChopsFields"),
+
+        eventFields:
+          document.getElementById("eventFields"),
+      };
+
+      const today = new Date();
+      const year = today.getFullYear();
+      const month = String(today.getMonth() + 1).padStart(2, "0");
+      const day = String(today.getDate()).padStart(2, "0");
+
+      eventDate.min = `${year}-${month}-${day}`;
+
+      const searchParameters =
+        new URLSearchParams(window.location.search);
+
+      const selectedService =
+        searchParameters.get("service");
+
+      if (selectedService) {
+        const matchingOption = Array.from(
+          serviceSelect.options
+        ).find(
+          (option) =>
+            option.value.toLowerCase() ===
+            selectedService.toLowerCase()
+        );
+
+        if (matchingOption) {
+          serviceSelect.value = matchingOption.value;
+        }
+      }
+
+      function hideConditionalFields() {
+        Object.values(conditionalSections).forEach((section) => {
+          section.classList.remove("show");
+        });
+      }
+
+      function updateConditionalFields() {
+        hideConditionalFields();
+
+        const service = serviceSelect.value;
+
+        if (
+          service === "Catering" ||
+          service === "Corporate Event"
+        ) {
+          conditionalSections.cateringFields.classList.add("show");
+        }
+
+        if (service === "Cakes and Pastries") {
+          conditionalSections.cakeFields.classList.add("show");
+        }
+
+        if (service === "Small Chops") {
+          conditionalSections.smallChopsFields.classList.add("show");
+        }
+
+        if (
+          service === "Event Decoration" ||
+          service === "Event Planning"
+        ) {
+          conditionalSections.eventFields.classList.add("show");
+        }
+      }
+
+      serviceSelect.addEventListener(
+        "change",
+        updateConditionalFields
+      );
+
+      updateConditionalFields();
+
+      function getValue(id, fallback = "Not specified") {
+        const element = document.getElementById(id);
+
+        if (!element) return fallback;
+
+        const value = element.value.trim();
+        return value || fallback;
+      }
+
+      function formatDate(dateValue) {
+        if (!dateValue) return "Not specified";
+
+        const date = new Date(`${dateValue}T00:00:00`);
+
+        return date.toLocaleDateString("en-NG", {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        });
+      }
+
+      function validateForm() {
+        let valid = true;
+
+        const requiredFields =
+          form.querySelectorAll("[required]");
+
+        requiredFields.forEach((field) => {
+          const fieldGroup = field.closest(".form-group");
+          const errorMessage =
+            fieldGroup?.querySelector(".field-error");
+
+          let fieldValid;
+
+          if (field.type === "checkbox") {
+            fieldValid = field.checked;
+          } else {
+            fieldValid = field.value.trim() !== "";
+          }
+
+          field.classList.toggle("invalid", !fieldValid);
+
+          if (errorMessage) {
+            errorMessage.classList.toggle("show", !fieldValid);
+          }
+
+          if (!fieldValid) {
+            valid = false;
+          }
+        });
+
+        formMessage.classList.toggle("error", !valid);
+        bottomFormMessage.classList.toggle("error", !valid);
+
+        if (!valid) {
+          const firstInvalid =
+            form.querySelector(".invalid");
+
+          firstInvalid?.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+
+        return valid;
+      }
+
+      form.querySelectorAll("input, select, textarea").forEach(
+        (field) => {
+          field.addEventListener("input", () => {
+            field.classList.remove("invalid");
+
+            const errorMessage =
+              field.closest(".form-group")
+                ?.querySelector(".field-error");
+
+            errorMessage?.classList.remove("show");
+          });
+        }
+      );
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!validateForm()) return;
+
+        const service = getValue("service");
+
+        let serviceSpecificDetails = "";
+
+        if (
+          service === "Catering" ||
+          service === "Corporate Event"
+        ) {
+          serviceSpecificDetails = `
+*Meal Service:* ${getValue("mealType")}
+*Menu Preference:* ${getValue("menuPreference")}`;
+        }
+
+        if (service === "Cakes and Pastries") {
+          serviceSpecificDetails = `
+*Order Type:* ${getValue("cakeType")}
+*Size or Quantity:* ${getValue("cakeSize")}
+*Design, Flavour or Colour:* ${getValue("cakeDesign")}`;
+        }
+
+        if (service === "Small Chops") {
+          serviceSpecificDetails = `
+*Portions or Packs:* ${getValue("smallChopsQuantity")}
+*Packaging:* ${getValue("packaging")}`;
+        }
+
+        if (
+          service === "Event Decoration" ||
+          service === "Event Planning"
+        ) {
+          serviceSpecificDetails = `
+*Theme or Colours:* ${getValue("eventTheme")}
+*Venue Status:* ${getValue("venueType")}`;
+        }
+
+        const whatsappMessage = `
+*NEW TEFAD SERVICE ENQUIRY*
+
+Hello TEFAD Enterprise Ltd, I would like to make a service enquiry.
+
+*CUSTOMER INFORMATION*
+*Name:* ${getValue("fullName")}
+*Phone:* ${getValue("phone")}
+*Email:* ${getValue("email")}
+*Preferred Response:* ${getValue("contactMethod")}
+
+*SERVICE INFORMATION*
+*Service Required:* ${service}
+${serviceSpecificDetails}
+
+*OCCASION DETAILS*
+*Occasion:* ${getValue("eventType")}
+*Preferred Date:* ${formatDate(getValue("eventDate", ""))}
+*Preferred Time:* ${getValue("eventTime")}
+*Guests or Quantity:* ${getValue("guestCount")}
+*Location:* ${getValue("location")}
+*Estimated Budget:* ${getValue("budget")}
+*How I Heard About TEFAD:* ${getValue("discovery")}
+
+*ADDITIONAL REQUIREMENTS*
+${getValue("message", "No additional requirements provided.")}
+
+Please confirm availability and provide the appropriate recommendations and quotation. Thank you.
+        `.trim();
+
+        const whatsappURL =
+          "https://wa.me/2348154440684?text=" +
+          encodeURIComponent(whatsappMessage);
+
+        window.open(
+          whatsappURL,
+          "_blank",
+          "noopener,noreferrer"
+        );
+      });
+
+      form.addEventListener("reset", () => {
+        setTimeout(() => {
+          hideConditionalFields();
+
+          form.querySelectorAll(".invalid").forEach((field) => {
+            field.classList.remove("invalid");
+          });
+
+          form.querySelectorAll(".field-error").forEach((error) => {
+            error.classList.remove("show");
+          });
+
+          formMessage.classList.remove("error");
+          bottomFormMessage.classList.remove("error");
+        }, 0);
+      });
+    });
+  </script>
+</body>
+</html>

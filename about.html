@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Learn about TEFAD Enterprise Ltd, a premium catering, baking and event services company located in Abuja Karu, Nigeria."
+  >
+
+  <meta name="author" content="TEFAD Enterprise Ltd">
+  <meta name="theme-color" content="#5b071b">
+
+  <meta property="og:title" content="About TEFAD Enterprise Ltd">
+  <meta
+    property="og:description"
+    content="Discover our commitment to exceptional food, professional service and unforgettable celebrations."
+  >
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:type" content="website">
+
+  <title>About Us | TEFAD Enterprise Ltd</title>
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    The connection links for Google Fonts should not include
+    anything before the word link.
+  */ href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .inner-hero {
+      position: relative;
+      display: flex;
+      min-height: 560px;
+      padding: 180px 0 95px;
+      align-items: flex-end;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(39, 1, 11, 0.97),
+          rgba(70, 4, 22, 0.8)
+        ),
+        url("images/about-hero.jpg") center/cover no-repeat;
+    }
+
+    .inner-hero::before {
+      position: absolute;
+      top: -230px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      border: 1px solid rgba(212, 169, 79, 0.18);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .inner-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      margin-bottom: 22px;
+      gap: 10px;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .breadcrumbs a {
+      color: var(--gold-light);
+    }
+
+    .breadcrumbs i {
+      font-size: 0.55rem;
+    }
+
+    .inner-hero h1 {
+      color: var(--white);
+      font-size: clamp(3.8rem, 8vw, 6.8rem);
+      font-weight: 600;
+    }
+
+    .inner-hero h1 em {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    .inner-hero p {
+      max-width: 670px;
+      margin-top: 22px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+    }
+
+    .story-section {
+      background: var(--ivory);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .story-visual {
+      position: relative;
+      min-height: 650px;
+    }
+
+    .story-main-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 88%;
+      height: 570px;
+      box-shadow: var(--shadow);
+    }
+
+    .story-small-image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 47%;
+      height: 255px;
+      border: 9px solid var(--ivory);
+      box-shadow: var(--shadow);
+    }
+
+    .story-detail {
+      position: absolute;
+      top: 40px;
+      right: -15px;
+      display: flex;
+      width: 125px;
+      height: 125px;
+      padding: 15px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      background: var(--burgundy);
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .story-detail i {
+      margin-bottom: 7px;
+      color: var(--gold);
+    }
+
+    .story-detail strong {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.05rem;
+      line-height: 1.05;
+    }
+
+    .story-detail span {
+      margin-top: 5px;
+      font-size: 0.5rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .story-content .lead {
+      margin: 24px 0 18px;
+      color: var(--charcoal);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.45rem;
+      line-height: 1.45;
+    }
+
+    .story-content > p:not(.lead) {
+      margin-bottom: 17px;
+    }
+
+    .founder-note {
+      margin-top: 30px;
+      padding: 25px 28px;
+      border-left: 3px solid var(--gold);
+      background: var(--white);
+      box-shadow: 0 10px 30px rgba(41, 9, 16, 0.06);
+    }
+
+    .founder-note p {
+      color: var(--charcoal);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .founder-note span {
+      display: block;
+      margin-top: 10px;
+      color: var(--burgundy);
+      font-size: 0.63rem;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .purpose-section {
+      color: var(--white);
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(212, 169, 79, 0.16),
+          transparent 28%
+        ),
+        var(--burgundy-dark);
+    }
+
+    .purpose-section h2 {
+      color: var(--white);
+    }
+
+    .purpose-section h2 em {
+      color: var(--gold-light);
+    }
+
+    .purpose-intro {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      margin-bottom: 60px;
+      gap: 80px;
+      align-items: end;
+    }
+
+    .purpose-intro > p {
+      padding-bottom: 10px;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .purpose-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .purpose-card {
+      position: relative;
+      min-height: 325px;
+      padding: 40px 30px;
+      overflow: hidden;
+      border: 1px solid rgba(212, 169, 79, 0.22);
+      background: rgba(255, 255, 255, 0.035);
+      transition:
+        transform var(--transition),
+        background var(--transition);
+    }
+
+    .purpose-card:hover {
+      background: rgba(255, 255, 255, 0.075);
+      transform: translateY(-7px);
+    }
+
+    .purpose-card > span {
+      position: absolute;
+      right: 20px;
+      bottom: -30px;
+      color: rgba(255, 255, 255, 0.035);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 9rem;
+      line-height: 1;
+    }
+
+    .purpose-icon {
+      display: flex;
+      width: 58px;
+      height: 58px;
+      margin-bottom: 30px;
+      align-items: center;
+      justify-content: center;
+      color: var(--burgundy-dark);
+      background: var(--gold);
+      border-radius: 50%;
+      font-size: 1.25rem;
+    }
+
+    .purpose-card h3 {
+      margin-bottom: 14px;
+      color: var(--white);
+      font-size: 1.75rem;
+    }
+
+    .purpose-card p {
+      position: relative;
+      z-index: 2;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.85rem;
+    }
+
+    .values-section {
+      background: var(--white);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 50px;
+      gap: 18px;
+    }
+
+    .value-item {
+      display: flex;
+      padding: 30px;
+      gap: 20px;
+      align-items: flex-start;
+      border: 1px solid var(--light-grey);
+      transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+    }
+
+    .value-item:hover {
+      border-color: rgba(212, 169, 79, 0.6);
+      box-shadow: var(--shadow);
+      transform: translateY(-4px);
+    }
+
+    .value-number {
+      color: var(--gold-dark);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+
+    .value-item h3 {
+      margin-bottom: 8px;
+      font-size: 1.5rem;
+    }
+
+    .value-item p {
+      font-size: 0.83rem;
+    }
+
+    .promise-section {
+      position: relative;
+      overflow: hidden;
+      background: var(--cream);
+    }
+
+    .promise-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .promise-content > p {
+      margin: 24px 0 30px;
+    }
+
+    .promise-list {
+      display: grid;
+      gap: 15px;
+    }
+
+    .promise-list li {
+      display: flex;
+      gap: 13px;
+      align-items: center;
+      color: var(--charcoal);
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+
+    .promise-list i {
+      display: flex;
+      min-width: 27px;
+      height: 27px;
+      align-items: center;
+      justify-content: center;
+      color: var(--burgundy);
+      background: rgba(212, 169, 79, 0.25);
+      border-radius: 50%;
+      font-size: 0.65rem;
+    }
+
+    .promise-visual {
+      position: relative;
+      min-height: 520px;
+    }
+
+    .promise-visual .image-placeholder {
+      width: 100%;
+      height: 500px;
+      box-shadow: var(--shadow);
+    }
+
+    .promise-quote {
+      position: absolute;
+      right: -25px;
+      bottom: 0;
+      max-width: 310px;
+      padding: 28px;
+      color: var(--white);
+      background: var(--burgundy);
+      box-shadow: var(--shadow);
+    }
+
+    .promise-quote i {
+      margin-bottom: 10px;
+      color: var(--gold);
+    }
+
+    .promise-quote p {
+      color: rgba(255, 255, 255, 0.83);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 900px) {
+      .story-grid,
+      .purpose-intro,
+      .promise-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .purpose-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .purpose-intro {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .inner-hero {
+        min-height: 480px;
+        padding: 150px 0 70px;
+      }
+
+      .story-visual {
+        min-height: 475px;
+      }
+
+      .story-main-image {
+        height: 410px;
+      }
+
+      .story-small-image {
+        width: 52%;
+        height: 190px;
+        border-width: 6px;
+      }
+
+      .story-detail {
+        right: 0;
+        width: 100px;
+        height: 100px;
+      }
+
+      .story-detail strong {
+        font-size: 0.9rem;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .value-item {
+        padding: 24px 20px;
+      }
+
+      .promise-visual {
+        min-height: 445px;
+      }
+
+      .promise-visual .image-placeholder {
+        height: 420px;
+      }
+
+      .promise-quote {
+        right: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="preloader" id="preloader">
+    <img src="images/logo.png" alt="TEFAD Enterprise Ltd logo">
+    <span>Preparing something exceptional...</span>
+  </div>
+
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Abuja Karu, Karu, Nigeria
+      </p>
+
+      <div class="top-contact">
+        <a href="tel:+2348154440684">
+          <i class="fa-solid fa-phone"></i>
+          +234 815 444 0684
+        </a>
+
+        <a href="mailto:tosinfaith4real@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          tosinfaith4real@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+
+        <div class="brand-text">
+          <strong>TEFAD</strong>
+          <span>Enterprise Ltd</span>
+        </div>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" id="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Book Us</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="booking.html" class="nav-cta">
+          Request a Quote
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="inner-hero">
+      <div class="container inner-hero-content">
+
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>About Us</span>
+        </div>
+
+        <h1>
+          Passion behind every
+          <em>experience.</em>
+        </h1>
+
+        <p>
+          Discover the story, values and commitment behind TEFAD
+          Enterprise Ltd.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section story-section">
+      <div class="container story-grid">
+
+        <div class="story-visual reveal">
+          <div class="story-main-image image-placeholder">
+            <div class="placeholder-content">
+              <i class="fa-solid fa-user-chef"></i>
+              <span>Add a professional TEFAD team image</span>
+            </div>
+          </div>
+
+          <div class="story-small-image image-placeholder">
+            <div class="placeholder-content">
+              <i class="fa-solid fa-utensils"></i>
+              <span>Add catering image</span>
+            </div>
+          </div>
+
+          <div class="story-detail">
+            <i class="fa-solid fa-star"></i>
+            <strong>Crafted with Excellence</strong>
+            <span>The TEFAD Standard</span>
+          </div>
+        </div>
+
+        <div class="story-content reveal">
+          <div class="section-tag">Our Story</div>
+
+          <h2>
+            Creating memorable moments through
+            <em>food and service.</em>
+          </h2>
+
+          <p class="lead">
+            TEFAD Enterprise Ltd was created from a passion for
+            excellent food, beautiful presentation and celebrations
+            that leave lasting memories.
+          </p>
+
+          <p>
+            Based in Abuja Karu, Nigeria, we provide professional
+            catering, custom cakes, pastries, small chops, event
+            decoration and event-planning services for private and
+            corporate clients.
+          </p>
+
+          <p>
+            Every client and occasion is unique. We therefore take time
+            to understand each request, recommend suitable solutions
+            and carefully execute every agreed detail.
+          </p>
+
+          <p>
+            From an intimate birthday celebration to a wedding or
+            corporate gathering, our goal remains the same: to provide
+            exceptional taste, dependable service and an experience
+            people will be delighted to remember.
+          </p>
+
+          <div class="founder-note">
+            <p>
+              “We believe beautiful celebrations begin with thoughtful
+              planning, excellent taste and genuine care.”
+            </p>
+
+            <span>TEFAD Enterprise Ltd</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section purpose-section">
+      <div class="container">
+
+        <div class="purpose-intro reveal">
+          <div>
+            <div class="section-tag light">Our Purpose</div>
+            <h2>
+              The principles guiding
+              <em>everything we create.</em>
+            </h2>
+          </div>
+
+          <p>
+            Our purpose goes beyond serving food or decorating a venue.
+            We create complete experiences that help clients celebrate
+            confidently and enjoy their important moments.
+          </p>
+        </div>
+
+        <div class="purpose-grid">
+
+          <article class="purpose-card reveal">
+            <span>01</span>
+
+            <div class="purpose-icon">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <h3>Our Vision</h3>
+
+            <p>
+              To become a trusted and distinguished Nigerian brand
+              recognised for premium catering, creative event
+              experiences and excellent customer service.
+            </p>
+          </article>
+
+          <article class="purpose-card reveal">
+            <span>02</span>
+
+            <div class="purpose-icon">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+
+            <h3>Our Mission</h3>
+
+            <p>
+              To create delicious food and beautifully organised
+              celebrations through quality, creativity,
+              professionalism and attention to detail.
+            </p>
+          </article>
+
+          <article class="purpose-card reveal">
+            <span>03</span>
+
+            <div class="purpose-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+
+            <h3>Our Commitment</h3>
+
+            <p>
+              To listen carefully, communicate clearly and deliver
+              every service with honesty, reliability and respect for
+              the client's vision.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section values-section">
+      <div class="container">
+
+        <div class="section-heading centered reveal">
+          <div class="section-tag">Our Core Values</div>
+
+          <h2>
+            Values that define the
+            <em>TEFAD standard.</em>
+          </h2>
+
+          <p>
+            These principles shape how we serve our clients and handle
+            every occasion entrusted to us.
+          </p>
+        </div>
+
+        <div class="values-grid">
+
+          <article class="value-item reveal">
+            <div class="value-number">01</div>
+
+            <div>
+              <h3>Excellence</h3>
+              <p>
+                We pursue high standards in taste, appearance,
+                preparation, communication and delivery.
+              </p>
+            </div>
+          </article>
+
+          <article class="value-item reveal">
+            <div class="value-number">02</div>
+
+            <div>
+              <h3>Creativity</h3>
+              <p>
+                We develop thoughtful ideas that reflect each client's
+                personality, occasion and vision.
+              </p>
+            </div>
+          </article>
+
+          <article class="value-item reveal">
+            <div class="value-number">03</div>
+
+            <div>
+              <h3>Integrity</h3>
+              <p>
+                We communicate honestly, respect our agreements and
+                remain accountable for our work.
+              </p>
+            </div>
+          </article>
+
+          <article class="value-item reveal">
+            <div class="value-number">04</div>
+
+            <div>
+              <h3>Customer Care</h3>
+              <p>
+                We listen attentively and aim to make each customer's
+                experience easy, personal and satisfying.
+              </p>
+            </div>
+          </article>
+
+          <article class="value-item reveal">
+            <div class="value-number">05</div>
+
+            <div>
+              <h3>Quality</h3>
+              <p>
+                We prioritise suitable ingredients, careful preparation
+                and refined presentation.
+              </p>
+            </div>
+          </article>
+
+          <article class="value-item reveal">
+            <div class="value-number">06</div>
+
+            <div>
+              <h3>Reliability</h3>
+              <p>
+                Our clients can depend on us to plan carefully and
+                deliver every confirmed service professionally.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section promise-section">
+      <div class="container promise-grid">
+
+        <div class="promise-content reveal">
+          <div class="section-tag">Our Promise</div>
+
+          <h2>
+            Your occasion deserves
+            <em>our very best.</em>
+          </h2>
+
+          <p>
+            When you choose TEFAD, you receive more than a supplier.
+            You gain a committed service partner who understands the
+            importance of your celebration.
+          </p>
+
+          <ul class="promise-list">
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Professional and respectful communication
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Thoughtful planning based on your requirements
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Quality preparation and beautiful presentation
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Transparent service recommendations and quotation
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Dependable support throughout your booking
+            </li>
+          </ul>
+
+          <a href="booking.html" class="btn btn-dark" style="margin-top: 35px;">
+            Work With Us
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="promise-visual reveal">
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <i class="fa-solid fa-camera"></i>
+              <span>Add a completed event image here</span>
+            </div>
+          </div>
+
+          <div class="promise-quote">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>
+              Every detail matters because every celebration carries a
+              special meaning.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-overlay"></div>
+
+      <div class="container cta-content reveal">
+        <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+
+        <div>
+          <span>Let us bring your vision to life</span>
+          <h2>Ready to work with TEFAD?</h2>
+
+          <p>
+            Tell us about your occasion and receive a personalised
+            response directly on WhatsApp.
+          </p>
+        </div>
+
+        <a href="booking.html" class="btn btn-gold">
+          Start Your Booking
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">
+          <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+        </a>
+
+        <p>
+          Premium catering, cakes, pastries and event services created
+          to make every occasion exceptional.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://wa.me/2348154440684"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Book Us</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Services</h3>
+        <a href="services.html">Catering</a>
+        <a href="services.html">Cakes & Pastries</a>
+        <a href="services.html">Small Chops</a>
+        <a href="services.html">Decoration</a>
+        <a href="services.html">Event Planning</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contact</h3>
+
+        <a href="tel:+2348154440684">
+          <i class="fa-solid fa-phone"></i>
+          +234 815 444 0684
+        </a>
+
+        <a href="tel:+2348036211935">
+          <i class="fa-solid fa-phone"></i>
+          +234 803 621 1935
+        </a>
+
+        <a href="mailto:tosinfaith4real@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          tosinfaith4real@gmail.com
+        </a>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Abuja Karu, Karu, Nigeria
+        </p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        &copy; 2026 TEFAD Enterprise Ltd. All rights reserved.
+      </p>
+
+      <p>Exceptional taste. Unforgettable moments.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

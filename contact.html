@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Contact TEFAD Enterprise Ltd for premium catering, cakes, pastries, small chops, event decoration and planning in Abuja Karu."
+  >
+
+  <meta name="author" content="TEFAD Enterprise Ltd">
+  <meta name="theme-color" content="#5b071b">
+
+  <meta property="og:title" content="Contact TEFAD Enterprise Ltd">
+  <meta
+    property="og:description"
+    content="Contact TEFAD for catering, baking and event-service enquiries."
+  >
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:type" content="website">
+
+  <title>Contact Us | TEFAD Enterprise Ltd</title>
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .inner-hero {
+      position: relative;
+      display: flex;
+      min-height: 520px;
+      padding: 180px 0 90px;
+      align-items: flex-end;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(39, 1, 11, 0.98),
+          rgba(73, 5, 23, 0.82)
+        ),
+        url("images/contact-hero.jpg") center/cover no-repeat;
+    }
+
+    .inner-hero::before {
+      position: absolute;
+      top: -260px;
+      right: -100px;
+      width: 650px;
+      height: 650px;
+      border: 1px solid rgba(212, 169, 79, 0.18);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .inner-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      margin-bottom: 22px;
+      gap: 10px;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .breadcrumbs a {
+      color: var(--gold-light);
+    }
+
+    .breadcrumbs i {
+      font-size: 0.55rem;
+    }
+
+    .inner-hero h1 {
+      color: var(--white);
+      font-size: clamp(3.8rem, 8vw, 6.8rem);
+      font-weight: 600;
+    }
+
+    .inner-hero h1 em {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    .inner-hero p {
+      max-width: 680px;
+      margin-top: 22px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .contact-section {
+      background: var(--ivory);
+    }
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 65px;
+      gap: 17px;
+    }
+
+    .contact-card {
+      min-height: 250px;
+      padding: 32px 25px;
+      background: var(--white);
+      border-bottom: 3px solid var(--gold);
+      box-shadow: 0 12px 35px rgba(40, 8, 15, 0.07);
+      transition:
+        transform var(--transition),
+        background var(--transition);
+    }
+
+    .contact-card:hover {
+      color: var(--white);
+      background: var(--burgundy);
+      transform: translateY(-7px);
+    }
+
+    .contact-card-icon {
+      display: flex;
+      width: 52px;
+      height: 52px;
+      margin-bottom: 24px;
+      align-items: center;
+      justify-content: center;
+      color: var(--burgundy);
+      background: var(--cream);
+      border-radius: 50%;
+      font-size: 1.15rem;
+    }
+
+    .contact-card:hover .contact-card-icon {
+      color: var(--burgundy-dark);
+      background: var(--gold);
+    }
+
+    .contact-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.45rem;
+    }
+
+    .contact-card a,
+    .contact-card p {
+      display: block;
+      color: var(--grey);
+      font-size: 0.74rem;
+      word-break: break-word;
+      transition: color var(--transition);
+    }
+
+    .contact-card a + a {
+      margin-top: 7px;
+    }
+
+    .contact-card:hover a,
+    .contact-card:hover p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .contact-card a:hover {
+      color: var(--gold-light);
+    }
+
+    .contact-main-grid {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 35px;
+      align-items: stretch;
+    }
+
+    .contact-information {
+      position: relative;
+      padding: 48px 38px;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(212, 169, 79, 0.2),
+          transparent 30%
+        ),
+        var(--burgundy-dark);
+    }
+
+    .contact-information::after {
+      position: absolute;
+      right: -140px;
+      bottom: -180px;
+      width: 380px;
+      height: 380px;
+      border: 1px solid rgba(212, 169, 79, 0.14);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .contact-information img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 25px;
+      object-fit: contain;
+    }
+
+    .contact-information h2 {
+      color: var(--white);
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+    }
+
+    .contact-information > p {
+      margin-top: 17px;
+      color: rgba(255, 255, 255, 0.63);
+      font-size: 0.82rem;
+    }
+
+    .contact-details {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      margin-top: 32px;
+      gap: 20px;
+    }
+
+    .contact-detail {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .contact-detail > i {
+      display: flex;
+      min-width: 38px;
+      height: 38px;
+      align-items: center;
+      justify-content: center;
+      color: var(--burgundy-dark);
+      background: var(--gold);
+      border-radius: 50%;
+      font-size: 0.8rem;
+    }
+
+    .contact-detail strong {
+      display: block;
+      color: var(--gold-light);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.08rem;
+    }
+
+    .contact-detail a,
+    .contact-detail span {
+      display: block;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.72rem;
+    }
+
+    .contact-detail a:hover {
+      color: var(--gold-light);
+    }
+
+    .contact-form-wrapper {
+      padding: 48px;
+      background: var(--white);
+      border-top: 4px solid var(--gold);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-form-heading {
+      margin-bottom: 30px;
+    }
+
+    .contact-form-heading h2 {
+      font-size: clamp(2.3rem, 4vw, 3.5rem);
+    }
+
+    .contact-form-heading p {
+      margin-top: 12px;
+      font-size: 0.8rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      margin-bottom: 8px;
+      color: var(--charcoal);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .required {
+      color: #b51638;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      min-height: 52px;
+      padding: 13px 15px;
+      color: var(--charcoal);
+      background: #fdfaf6;
+      border: 1px solid #ded7d0;
+      border-radius: 0;
+      outline: 0;
+      transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+    }
+
+    .form-group textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      background: var(--white);
+      border-color: var(--gold-dark);
+      box-shadow: 0 0 0 3px rgba(212, 169, 79, 0.13);
+    }
+
+    .form-group input.invalid,
+    .form-group select.invalid,
+    .form-group textarea.invalid {
+      background: #fff8f8;
+      border-color: #c62828;
+    }
+
+    .field-error {
+      display: none;
+      margin-top: 6px;
+      color: #b51638;
+      font-size: 0.62rem;
+      font-weight: 700;
+    }
+
+    .field-error.show {
+      display: block;
+    }
+
+    .contact-submit {
+      display: inline-flex;
+      min-height: 57px;
+      margin-top: 25px;
+      padding: 15px 27px;
+      gap: 11px;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      background: #159653;
+      border: 1px solid #159653;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition:
+        transform var(--transition),
+        background var(--transition);
+    }
+
+    .contact-submit:hover {
+      background: #0e7e44;
+      transform: translateY(-3px);
+    }
+
+    .contact-submit i {
+      font-size: 1.2rem;
+    }
+
+    .contact-form-note {
+      display: flex;
+      margin-top: 18px;
+      gap: 8px;
+      color: #8b837d;
+      font-size: 0.61rem;
+    }
+
+    .contact-form-note i {
+      margin-top: 3px;
+      color: var(--gold-dark);
+    }
+
+    .form-alert {
+      display: none;
+      margin-bottom: 20px;
+      padding: 14px;
+      gap: 10px;
+      align-items: center;
+      color: #921830;
+      background: #fff0f3;
+      border: 1px solid #efbdc8;
+      font-size: 0.73rem;
+      font-weight: 700;
+    }
+
+    .form-alert.show {
+      display: flex;
+    }
+
+    .location-section {
+      background: var(--white);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .location-content > p {
+      margin: 22px 0 27px;
+    }
+
+    .location-notice {
+      display: flex;
+      padding: 20px;
+      gap: 13px;
+      align-items: flex-start;
+      background: var(--cream);
+      border-left: 3px solid var(--gold);
+    }
+
+    .location-notice i {
+      margin-top: 4px;
+      color: var(--burgundy);
+    }
+
+    .location-notice p {
+      color: var(--charcoal);
+      font-size: 0.75rem;
+    }
+
+    .map-wrapper {
+      min-height: 470px;
+      padding: 12px;
+      background: var(--cream);
+      box-shadow: var(--shadow);
+    }
+
+    .map-wrapper iframe {
+      display: block;
+      width: 100%;
+      height: 446px;
+      border: 0;
+    }
+
+    .availability-section {
+      background: var(--cream);
+    }
+
+    .availability-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 50px;
+      align-items: center;
+      padding: 50px;
+      background: var(--white);
+      border-left: 5px solid var(--gold);
+      box-shadow: var(--shadow);
+    }
+
+    .availability-box h2 {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+    }
+
+    .availability-box p {
+      max-width: 680px;
+      margin-top: 13px;
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 1000px) {
+      .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-main-grid,
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .availability-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .inner-hero {
+        min-height: 470px;
+        padding: 150px 0 70px;
+      }
+
+      .contact-cards,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-wrapper,
+      .contact-information {
+        padding: 35px 20px;
+      }
+
+      .map-wrapper {
+        min-height: 380px;
+      }
+
+      .map-wrapper iframe {
+        height: 356px;
+      }
+
+      .availability-box {
+        padding: 35px 22px;
+      }
+
+      .availability-box .btn,
+      .contact-submit {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="preloader" id="preloader">
+    <img src="images/logo.png" alt="TEFAD Enterprise Ltd logo">
+    <span>Preparing something exceptional...</span>
+  </div>
+
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Abuja Karu, Karu, Nigeria
+      </p>
+
+      <div class="top-contact">
+        <a href="tel:+2348154440684">
+          <i class="fa-solid fa-phone"></i>
+          +234 815 444 0684
+        </a>
+
+        <a href="mailto:tosinfaith4real@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          tosinfaith4real@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+
+        <div class="brand-text">
+          <strong>TEFAD</strong>
+          <span>Enterprise Ltd</span>
+        </div>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" id="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Book Us</a>
+        <a href="contact.html" class="active">Contact</a>
+
+        <a href="booking.html" class="nav-cta">
+          Request a Quote
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="inner-hero">
+      <div class="container inner-hero-content">
+
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Contact</span>
+        </div>
+
+        <h1>
+          We would love to
+          <em>hear from you.</em>
+        </h1>
+
+        <p>
+          Contact TEFAD for questions, service enquiries, bookings,
+          partnerships or assistance with your upcoming occasion.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <div class="container">
+
+        <div class="section-heading centered reveal">
+          <div class="section-tag">Contact TEFAD</div>
+
+          <h2>
+            Choose the most convenient way to
+            <em>reach our team.</em>
+          </h2>
+        </div>
+
+        <div class="contact-cards">
+
+          <article class="contact-card reveal">
+            <div class="contact-card-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+
+            <h3>Call Us</h3>
+
+            <a href="tel:+2348154440684">
+              +234 815 444 0684
+            </a>
+
+            <a href="tel:+2348036211935">
+              +234 803 621 1935
+            </a>
+          </article>
+
+          <article class="contact-card reveal">
+            <div class="contact-card-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+            <h3>WhatsApp</h3>
+
+            <a
+              href="https://wa.me/2348154440684"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Start a conversation
+            </a>
+
+            <p>Fast and convenient service enquiries.</p>
+          </article>
+
+          <article class="contact-card reveal">
+            <div class="contact-card-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <h3>Email Us</h3>
+
+            <a href="mailto:tosinfaith4real@gmail.com">
+              tosinfaith4real@gmail.com
+            </a>
+
+            <p>Send detailed enquiries and documents.</p>
+          </article>
+
+          <article class="contact-card reveal">
+            <div class="contact-card-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <h3>Our Location</h3>
+
+            <p>Abuja Karu, Karu, Nigeria</p>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Abuja+Karu+Nigeria"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open directions
+            </a>
+          </article>
+
+        </div>
+
+        <div class="contact-main-grid">
+
+          <div class="contact-information reveal">
+            <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+
+            <div class="section-tag light">Speak With Us</div>
+
+            <h2>Let us discuss what you need.</h2>
+
+            <p>
+              Our team is available to answer questions and help you
+              select the most suitable service for your occasion.
+            </p>
+
+            <div class="contact-details">
+
+              <div class="contact-detail">
+                <i class="fa-solid fa-phone"></i>
+
+                <div>
+                  <strong>Telephone</strong>
+                  <a href="tel:+2348154440684">
+                    +234 815 444 0684
+                  </a>
+                  <a href="tel:+2348036211935">
+                    +234 803 621 1935
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <i class="fa-solid fa-envelope"></i>
+
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:tosinfaith4real@gmail.com">
+                    tosinfaith4real@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div>
+                  <strong>Location</strong>
+                  <span>Abuja Karu, Karu, Nigeria</span>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <i class="fa-solid fa-share-nodes"></i>
+
+                <div>
+                  <strong>Social Media</strong>
+                  <span>TEFAD Enterprise LTD</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper reveal">
+            <div class="contact-form-heading">
+              <div class="section-tag">Send a Message</div>
+
+              <h2>How can we help?</h2>
+
+              <p>
+                Complete this short form and send your message directly
+                to our WhatsApp.
+              </p>
+            </div>
+
+            <div class="form-alert" id="contactFormAlert">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span>Please complete all required fields.</span>
+            </div>
+
+            <form id="contactForm" novalidate>
+              <div class="form-grid">
+
+                <div class="form-group">
+                  <label for="contactName">
+                    Full name <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                  >
+
+                  <small class="field-error">
+                    Please enter your name.
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactPhone">
+                    Phone number <span class="required">*</span>
+                  </label>
+
+                  <input
+                    type="tel"
+                    id="contactPhone"
+                    placeholder="+234..."
+                    autocomplete="tel"
+                    required
+                  >
+
+                  <small class="field-error">
+                    Please enter your phone number.
+                  </small>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail">
+                    Email address
+                  </label>
+
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    placeholder="example@email.com"
+                    autocomplete="email"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject">
+                    Enquiry type <span class="required">*</span>
+                  </label>
+
+                  <select id="contactSubject" required>
+                    <option value="">Select enquiry type</option>
+                    <option value="General Enquiry">
+                      General enquiry
+                    </option>
+                    <option value="Service Enquiry">
+                      Service enquiry
+                    </option>
+                    <option value="Booking Assistance">
+                      Booking assistance
+                    </option>
+                    <option value="Corporate Partnership">
+                      Corporate partnership
+                    </option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Other">Other</option>
+                  </select>
+
+                  <small class="field-error">
+                    Please select an enquiry type.
+                  </small>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="contactMessage">
+                    Your message <span class="required">*</span>
+                  </label>
+
+                  <textarea
+                    id="contactMessage"
+                    placeholder="Type your message or question"
+                    required
+                  ></textarea>
+
+                  <small class="field-error">
+                    Please enter your message.
+                  </small>
+                </div>
+
+              </div>
+
+              <button type="submit" class="contact-submit">
+                <i class="fa-brands fa-whatsapp"></i>
+                Send Message on WhatsApp
+              </button>
+
+              <div class="contact-form-note">
+                <i class="fa-solid fa-lock"></i>
+
+                <span>
+                  Your details will only be used to respond to this
+                  enquiry.
+                </span>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section location-section">
+      <div class="container location-grid">
+
+        <div class="location-content reveal">
+          <div class="section-tag">Our Service Location</div>
+
+          <h2>
+            Based in Abuja Karu,
+            <em>serving your occasion.</em>
+          </h2>
+
+          <p>
+            Contact us before visiting or arranging collection,
+            consultation or delivery so our team can properly assist
+            you.
+          </p>
+
+          <div class="location-notice">
+            <i class="fa-solid fa-circle-info"></i>
+
+            <p>
+              Event availability and delivery arrangements depend on
+              your date, exact location and selected service.
+            </p>
+          </div>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Abuja+Karu+Nigeria"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-dark"
+            style="margin-top: 28px;"
+          >
+            Open in Google Maps
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="map-wrapper reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Abuja%20Karu%20Nigeria&output=embed"
+            title="TEFAD Enterprise Ltd location in Abuja Karu"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section availability-section">
+      <div class="container">
+
+        <div class="availability-box reveal">
+          <div>
+            <div class="section-tag">Planning an Occasion?</div>
+
+            <h2>Check availability for your preferred date.</h2>
+
+            <p>
+              Complete the detailed booking form to provide your date,
+              location, number of guests and required service.
+            </p>
+          </div>
+
+          <a href="booking.html" class="btn btn-dark">
+            Request a Quote
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">
+          <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+        </a>
+
+        <p>
+          Premium catering, cakes, pastries and event services created
+          to make every occasion exceptional.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://wa.me/2348154440684"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Book Us</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Services</h3>
+        <a href="services.html">Catering</a>
+        <a href="services.html">Cakes & Pastries</a>
+        <a href="services.html">Small Chops</a>
+        <a href="services.html">Decoration</a>
+        <a href="services.html">Event Planning</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contact</h3>
+
+        <a href="tel:+2348154440684">
+          <i class="fa-solid fa-phone"></i>
+          +234 815 444 0684
+        </a>
+
+        <a href="tel:+2348036211935">
+          <i class="fa-solid fa-phone"></i>
+          +234 803 621 1935
+        </a>
+
+        <a href="mailto:tosinfaith4real@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          tosinfaith4real@gmail.com
+        </a>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Abuja Karu, Karu, Nigeria
+        </p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        &copy; 2026 TEFAD Enterprise Ltd. All rights reserved.
+      </p>
+
+      <p>Exceptional taste. Unforgettable moments.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const contactForm =
+        document.getElementById("contactForm");
+
+      const contactFormAlert =
+        document.getElementById("contactFormAlert");
+
+      function getContactValue(id, fallback = "Not provided") {
+        const element = document.getElementById(id);
+        const value = element?.value.trim();
+
+        return value || fallback;
+      }
+
+      function validateContactForm() {
+        let valid = true;
+
+        const requiredFields =
+          contactForm.querySelectorAll("[required]");
+
+        requiredFields.forEach((field) => {
+          const fieldValid = field.value.trim() !== "";
+
+          field.classList.toggle("invalid", !fieldValid);
+
+          const error =
+            field.closest(".form-group")
+              ?.querySelector(".field-error");
+
+          error?.classList.toggle("show", !fieldValid);
+
+          if (!fieldValid) {
+            valid = false;
+          }
+        });
+
+        contactFormAlert.classList.toggle("show", !valid);
+
+        if (!valid) {
+          contactForm.querySelector(".invalid")
+            ?.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+        }
+
+        return valid;
+      }
+
+      contactForm
+        .querySelectorAll("input, select, textarea")
+        .forEach((field) => {
+          field.addEventListener("input", () => {
+            field.classList.remove("invalid");
+
+            field.closest(".form-group")
+              ?.querySelector(".field-error")
+              ?.classList.remove("show");
+          });
+        });
+
+      contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!validateContactForm()) return;
+
+        const message = `
+*NEW TEFAD CONTACT MESSAGE*
+
+Hello TEFAD Enterprise Ltd, I would like to make an enquiry.
+
+*Name:* ${getContactValue("contactName")}
+*Phone:* ${getContactValue("contactPhone")}
+*Email:* ${getContactValue("contactEmail")}
+*Enquiry Type:* ${getContactValue("contactSubject")}
+
+*Message:*
+${getContactValue("contactMessage")}
+        `.trim();
+
+        const whatsappURL =
+          "https://wa.me/2348154440684?text=" +
+          encodeURIComponent(message);
+
+        window.open(
+          whatsappURL,
+          "_blank",
+          "noopener,noreferrer"
+        );
+      });
+    });
+  </script>
+</body>
+</html>

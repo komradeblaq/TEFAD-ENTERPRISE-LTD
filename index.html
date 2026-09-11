@@ -46,17 +46,47 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .main-image,
+    .small-image,
+    .experience-main-image,
+    .gallery-item img {
+      display: block;
+      object-fit: cover;
+    }
+
+    .experience-main-image {
+      width: 100%;
+      height: 570px;
+      box-shadow: var(--shadow-dark);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    @media (max-width: 620px) {
+      .experience-main-image {
+        height: 420px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Preloader -->
   <div class="preloader" id="preloader">
     <img src="images/logo.png" alt="TEFAD Enterprise Ltd logo">
     <span>Preparing something exceptional...</span>
   </div>
 
-  <!-- Top Bar -->
   <div class="top-bar">
     <div class="container top-bar-content">
       <p>
@@ -78,12 +108,16 @@
     </div>
   </div>
 
-  <!-- Header -->
   <header class="header" id="header">
     <div class="container nav-container">
 
-      <a href="index.html" class="brand" aria-label="TEFAD homepage">
+      <a
+        href="index.html"
+        class="brand"
+        aria-label="TEFAD homepage"
+      >
         <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+
         <div class="brand-text">
           <strong>TEFAD</strong>
           <span>Enterprise Ltd</span>
@@ -113,12 +147,12 @@
           Request a Quote
         </a>
       </nav>
+
     </div>
   </header>
 
   <main>
 
-    <!-- Hero -->
     <section class="hero">
       <div class="hero-overlay"></div>
 
@@ -178,24 +212,22 @@
       </a>
     </section>
 
-    <!-- Welcome -->
     <section class="section welcome-section" id="welcome">
       <div class="container welcome-grid">
 
         <div class="welcome-images reveal">
-          <div class="main-image image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-utensils"></i>
-              <span>Add premium catering image here</span>
-            </div>
-          </div>
 
-          <div class="small-image image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-cake-candles"></i>
-              <span>Add cake image</span>
-            </div>
-          </div>
+          <img
+            src="images/catering-1.jpg"
+            alt="TEFAD premium catering presentation"
+            class="main-image"
+          >
+
+          <img
+            src="images/cake-2.jpg"
+            alt="TEFAD custom celebration cake"
+            class="small-image"
+          >
 
           <div class="experience-badge">
             <i class="fa-solid fa-star"></i>
@@ -226,8 +258,10 @@
           </p>
 
           <div class="signature-features">
+
             <div class="signature-item">
               <i class="fa-solid fa-check"></i>
+
               <div>
                 <strong>Carefully Prepared</strong>
                 <span>Fresh ingredients and exceptional taste.</span>
@@ -236,6 +270,7 @@
 
             <div class="signature-item">
               <i class="fa-solid fa-check"></i>
+
               <div>
                 <strong>Beautifully Presented</strong>
                 <span>Every detail finished to a premium standard.</span>
@@ -244,11 +279,13 @@
 
             <div class="signature-item">
               <i class="fa-solid fa-check"></i>
+
               <div>
                 <strong>Professionally Delivered</strong>
                 <span>Reliable service from enquiry to execution.</span>
               </div>
             </div>
+
           </div>
 
           <a href="about.html" class="text-link">
@@ -260,13 +297,17 @@
       </div>
     </section>
 
-    <!-- Services -->
     <section class="section services-section">
       <div class="container">
 
         <div class="section-heading centered reveal">
           <div class="section-tag">What We Do</div>
-          <h2>Services crafted around <em>your occasion</em></h2>
+
+          <h2>
+            Services crafted around
+            <em>your occasion</em>
+          </h2>
+
           <p>
             Whether you are planning an intimate celebration or a large
             event, our team delivers every detail with care.
@@ -277,14 +318,18 @@
 
           <article class="service-card reveal">
             <div class="service-number">01</div>
+
             <div class="service-icon">
               <i class="fa-solid fa-bowl-food"></i>
             </div>
+
             <h3>Catering Services</h3>
+
             <p>
               Delicious, beautifully presented meals for weddings,
               birthdays, corporate functions and private gatherings.
             </p>
+
             <a href="booking.html?service=Catering">
               Make an enquiry
               <i class="fa-solid fa-arrow-right"></i>
@@ -294,15 +339,19 @@
           <article class="service-card featured reveal">
             <div class="popular-label">Most Requested</div>
             <div class="service-number">02</div>
+
             <div class="service-icon">
               <i class="fa-solid fa-cake-candles"></i>
             </div>
+
             <h3>Cakes & Pastries</h3>
+
             <p>
               Custom cakes, pastries and sweet treats prepared for
               birthdays, weddings and unforgettable celebrations.
             </p>
-            <a href="booking.html?service=Cakes">
+
+            <a href="booking.html?service=Cakes%20and%20Pastries">
               Place an order
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -310,15 +359,19 @@
 
           <article class="service-card reveal">
             <div class="service-number">03</div>
+
             <div class="service-icon">
               <i class="fa-solid fa-champagne-glasses"></i>
             </div>
+
             <h3>Small Chops</h3>
+
             <p>
               Fresh and irresistible finger foods arranged and packaged
               perfectly for every occasion.
             </p>
-            <a href="booking.html?service=Small Chops">
+
+            <a href="booking.html?service=Small%20Chops">
               Make an enquiry
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -326,15 +379,19 @@
 
           <article class="service-card reveal">
             <div class="service-number">04</div>
+
             <div class="service-icon">
               <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
+
             <h3>Event Decoration</h3>
+
             <p>
               Elegant decoration concepts that transform ordinary
               spaces into beautiful, memorable environments.
             </p>
-            <a href="booking.html?service=Decoration">
+
+            <a href="booking.html?service=Event%20Decoration">
               Request a quote
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -342,15 +399,19 @@
 
           <article class="service-card reveal">
             <div class="service-number">05</div>
+
             <div class="service-icon">
               <i class="fa-solid fa-calendar-check"></i>
             </div>
+
             <h3>Event Planning</h3>
+
             <p>
               Professional coordination and planning that allows you to
               enjoy your event without unnecessary stress.
             </p>
-            <a href="booking.html?service=Event Planning">
+
+            <a href="booking.html?service=Event%20Planning">
               Start planning
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -358,15 +419,19 @@
 
           <article class="service-card reveal">
             <div class="service-number">06</div>
+
             <div class="service-icon">
               <i class="fa-solid fa-briefcase"></i>
             </div>
+
             <h3>Corporate Events</h3>
+
             <p>
               Refined catering and hospitality solutions for meetings,
               launches, conferences and staff celebrations.
             </p>
-            <a href="booking.html?service=Corporate Event">
+
+            <a href="booking.html?service=Corporate%20Event">
               Contact our team
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -380,15 +445,17 @@
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
+
       </div>
     </section>
 
-    <!-- Experience -->
     <section class="experience-section">
       <div class="container experience-grid">
 
         <div class="experience-content reveal">
-          <div class="section-tag light">The TEFAD Experience</div>
+          <div class="section-tag light">
+            The TEFAD Experience
+          </div>
 
           <h2>
             More than a service.<br>
@@ -414,7 +481,9 @@
 
             <div>
               <span>03</span>
-              <p>Confirm your booking and allow us to handle the details.</p>
+              <p>
+                Confirm your booking and allow us to handle the details.
+              </p>
             </div>
 
             <div>
@@ -430,15 +499,15 @@
         </div>
 
         <div class="experience-visual reveal">
-          <div class="image-placeholder">
-            <div class="placeholder-content light-text">
-              <i class="fa-solid fa-camera"></i>
-              <span>Add a beautiful event image here</span>
-            </div>
-          </div>
+          <img
+            src="images/catering-3.jpg"
+            alt="TEFAD catering and event experience"
+            class="experience-main-image"
+          >
 
           <div class="quote-card">
             <i class="fa-solid fa-quote-left"></i>
+
             <p>
               Your celebration deserves thoughtful details,
               exceptional taste and professional care.
@@ -449,14 +518,17 @@
       </div>
     </section>
 
-    <!-- Gallery Preview -->
     <section class="section gallery-preview">
       <div class="container">
 
         <div class="gallery-heading reveal">
           <div>
             <div class="section-tag">Our Portfolio</div>
-            <h2>A taste of the <em>TEFAD standard</em></h2>
+
+            <h2>
+              A taste of the
+              <em>TEFAD standard</em>
+            </h2>
           </div>
 
           <a href="gallery.html" class="text-link">
@@ -466,61 +538,81 @@
         </div>
 
         <div class="gallery-grid">
-          <div class="gallery-item gallery-large image-placeholder reveal">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-image"></i>
-              <span>Wedding catering image</span>
-            </div>
+
+          <a
+            href="gallery.html"
+            class="gallery-item gallery-large reveal"
+          >
+            <img
+              src="images/catering-2.jpg"
+              alt="TEFAD catering service"
+            >
+
             <div class="gallery-caption">
               <span>Catering</span>
               <strong>Beautiful celebrations</strong>
             </div>
-          </div>
+          </a>
 
-          <div class="gallery-item image-placeholder reveal">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-image"></i>
-              <span>Custom cake image</span>
-            </div>
+          <a
+            href="gallery.html"
+            class="gallery-item reveal"
+          >
+            <img
+              src="images/cake-3.jpg"
+              alt="TEFAD custom cake"
+            >
+
             <div class="gallery-caption">
               <span>Cakes</span>
               <strong>Crafted with care</strong>
             </div>
-          </div>
+          </a>
 
-          <div class="gallery-item image-placeholder reveal">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-image"></i>
-              <span>Event decoration image</span>
-            </div>
+          <a
+            href="gallery.html"
+            class="gallery-item reveal"
+          >
+            <img
+              src="images/decoration-2.jpg"
+              alt="TEFAD event decoration"
+            >
+
             <div class="gallery-caption">
               <span>Decoration</span>
               <strong>Elegant spaces</strong>
             </div>
-          </div>
+          </a>
 
-          <div class="gallery-item gallery-wide image-placeholder reveal">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-image"></i>
-              <span>Small chops and pastries image</span>
-            </div>
+          <a
+            href="gallery.html"
+            class="gallery-item gallery-wide reveal"
+          >
+            <img
+              src="images/small-chops-1.jpg"
+              alt="TEFAD small chops"
+            >
+
             <div class="gallery-caption">
               <span>Small Chops</span>
               <strong>Delight in every bite</strong>
             </div>
-          </div>
-        </div>
+          </a>
 
+        </div>
       </div>
     </section>
 
-    <!-- Why Choose Us -->
     <section class="section why-section">
       <div class="container">
 
         <div class="section-heading centered reveal">
           <div class="section-tag">Why Choose TEFAD?</div>
-          <h2>Service you can <em>trust</em></h2>
+
+          <h2>
+            Service you can
+            <em>trust</em>
+          </h2>
         </div>
 
         <div class="why-grid">
@@ -528,7 +620,9 @@
           <div class="why-card reveal">
             <span>01</span>
             <i class="fa-solid fa-gem"></i>
+
             <h3>Premium Quality</h3>
+
             <p>
               Quality ingredients, elegant presentation and careful
               attention to every detail.
@@ -538,7 +632,9 @@
           <div class="why-card reveal">
             <span>02</span>
             <i class="fa-solid fa-user-check"></i>
+
             <h3>Personalised Service</h3>
+
             <p>
               Every menu, cake and event experience is planned around
               your needs.
@@ -548,7 +644,9 @@
           <div class="why-card reveal">
             <span>03</span>
             <i class="fa-solid fa-clock"></i>
+
             <h3>Dependable Delivery</h3>
+
             <p>
               Professional communication and reliable service from
               start to finish.
@@ -558,7 +656,9 @@
           <div class="why-card reveal">
             <span>04</span>
             <i class="fa-solid fa-heart"></i>
+
             <h3>Made with Passion</h3>
+
             <p>
               We treat each order and celebration as an opportunity to
               create something memorable.
@@ -569,16 +669,22 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="section testimonials-section">
       <div class="container">
 
         <div class="section-heading centered reveal">
           <div class="section-tag">Client Experiences</div>
-          <h2>Kind words from <em>happy clients</em></h2>
+
+          <h2>
+            Kind words from
+            <em>happy clients</em>
+          </h2>
         </div>
 
-        <div class="testimonial-slider reveal" id="testimonialSlider">
+        <div
+          class="testimonial-slider reveal"
+          id="testimonialSlider"
+        >
 
           <article class="testimonial active">
             <div class="stars">
@@ -597,6 +703,7 @@
 
             <div class="client">
               <div class="client-avatar">A</div>
+
               <div>
                 <strong>A Happy Client</strong>
                 <span>Private Celebration</span>
@@ -621,6 +728,7 @@
 
             <div class="client">
               <div class="client-avatar">C</div>
+
               <div>
                 <strong>Celebration Client</strong>
                 <span>Custom Cake Order</span>
@@ -644,6 +752,7 @@
 
             <div class="client">
               <div class="client-avatar">E</div>
+
               <div>
                 <strong>Event Client</strong>
                 <span>Event Planning & Catering</span>
@@ -652,13 +761,22 @@
           </article>
 
           <div class="testimonial-controls">
-            <button id="testimonialPrev" aria-label="Previous testimonial">
+            <button
+              id="testimonialPrev"
+              aria-label="Previous testimonial"
+            >
               <i class="fa-solid fa-arrow-left"></i>
             </button>
 
-            <div class="testimonial-dots" id="testimonialDots"></div>
+            <div
+              class="testimonial-dots"
+              id="testimonialDots"
+            ></div>
 
-            <button id="testimonialNext" aria-label="Next testimonial">
+            <button
+              id="testimonialNext"
+              aria-label="Next testimonial"
+            >
               <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
@@ -667,7 +785,6 @@
       </div>
     </section>
 
-    <!-- Call to Action -->
     <section class="cta-section">
       <div class="cta-overlay"></div>
 
@@ -677,6 +794,7 @@
         <div>
           <span>Let us bring your vision to life</span>
           <h2>Planning something special?</h2>
+
           <p>
             Tell us what you need and receive a personalised response
             directly on WhatsApp.
@@ -692,7 +810,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-grid">
 
@@ -718,7 +835,7 @@
           <a
             href="https://wa.me/2348154440684"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             aria-label="WhatsApp"
           >
             <i class="fa-brands fa-whatsapp"></i>
@@ -772,30 +889,12 @@
 
     <div class="container footer-bottom">
       <p>
-        © <span id="currentYear"></span> TEFAD Enterprise Ltd.
-        All rights reserved.
+        &copy; 2026 TEFAD Enterprise Ltd. All rights reserved.
       </p>
 
       <p>Exceptional taste. Unforgettable moments.</p>
     </div>
   </footer>
-
-  <!-- Floating WhatsApp -->
-  <a
-    href="https://wa.me/2348154440684?text=Hello%20TEFAD%20Enterprise%20Ltd,%20I%20would%20like%20to%20make%20an%20enquiry."
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat with TEFAD on WhatsApp"
-  >
-    <i class="fa-brands fa-whatsapp"></i>
-    <span>Chat with us</span>
-  </a>
-
-  <!-- Back to Top -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
 
   <noscript>
     Please enable JavaScript to enjoy all features of this website.

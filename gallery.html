@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Explore TEFAD Enterprise Ltd's catering, cakes, pastries, small chops and event decoration portfolio."
+  >
+
+  <meta name="author" content="TEFAD Enterprise Ltd">
+  <meta name="theme-color" content="#5b071b">
+
+  <meta property="og:title" content="Gallery | TEFAD Enterprise Ltd">
+  <meta
+    property="og:description"
+    content="Explore memorable food and event experiences created by TEFAD Enterprise Ltd."
+  >
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:type" content="website">
+
+  <title>Gallery | TEFAD Enterprise Ltd</title>
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .inner-hero {
+      position: relative;
+      display: flex;
+      min-height: 560px;
+      padding: 180px 0 95px;
+      align-items: flex-end;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(39, 1, 11, 0.97),
+          rgba(73, 5, 23, 0.8)
+        ),
+        url("images/gallery-hero.jpg") center/cover no-repeat;
+    }
+
+    .inner-hero::before {
+      position: absolute;
+      top: -240px;
+      right: -100px;
+      width: 640px;
+      height: 640px;
+      border: 1px solid rgba(212, 169, 79, 0.18);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .inner-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      margin-bottom: 22px;
+      gap: 10px;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .breadcrumbs a {
+      color: var(--gold-light);
+    }
+
+    .breadcrumbs i {
+      font-size: 0.55rem;
+    }
+
+    .inner-hero h1 {
+      color: var(--white);
+      font-size: clamp(3.8rem, 8vw, 6.8rem);
+      font-weight: 600;
+    }
+
+    .inner-hero h1 em {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    .inner-hero p {
+      max-width: 670px;
+      margin-top: 22px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .gallery-section {
+      background: var(--ivory);
+    }
+
+    .gallery-intro {
+      max-width: 790px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .gallery-intro .section-tag {
+      justify-content: center;
+    }
+
+    .gallery-intro .section-tag::after {
+      width: 38px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+
+    .gallery-intro p {
+      max-width: 630px;
+      margin: 18px auto 0;
+    }
+
+    .gallery-filters {
+      display: flex;
+      margin-bottom: 48px;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .filter-button {
+      padding: 11px 19px;
+      color: var(--burgundy);
+      background: transparent;
+      border: 1px solid rgba(91, 7, 27, 0.2);
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition:
+        color var(--transition),
+        background var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+    }
+
+    .filter-button:hover,
+    .filter-button.active {
+      color: var(--gold-light);
+      background: var(--burgundy);
+      border-color: var(--burgundy);
+      transform: translateY(-2px);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 330px;
+      gap: 16px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      background: var(--cream);
+      cursor: pointer;
+      transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+    }
+
+    .portfolio-item.tall {
+      grid-row: span 2;
+    }
+
+    .portfolio-item.wide {
+      grid-column: span 2;
+    }
+
+    .portfolio-item.hidden {
+      display: none;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.65s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.07);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      padding: 25px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      color: var(--white);
+      background:
+        linear-gradient(
+          transparent 35%,
+          rgba(43, 1, 12, 0.93)
+        );
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-overlay span {
+      color: var(--gold-light);
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .portfolio-overlay h3 {
+      margin-top: 4px;
+      color: var(--white);
+      font-size: 1.5rem;
+    }
+
+    .portfolio-view {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      display: flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      color: var(--burgundy-dark);
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .image-missing {
+      position: absolute;
+      inset: 0;
+      display: none;
+      padding: 25px;
+      flex-direction: column;
+      gap: 13px;
+      align-items: center;
+      justify-content: center;
+      color: var(--burgundy);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(91, 7, 27, 0.06),
+          rgba(212, 169, 79, 0.2)
+        ),
+        var(--cream);
+      text-align: center;
+    }
+
+    .image-missing i {
+      color: var(--gold-dark);
+      font-size: 2rem;
+    }
+
+    .image-missing span {
+      max-width: 230px;
+      color: var(--grey);
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .portfolio-item.missing .image-missing {
+      display: flex;
+    }
+
+    .portfolio-item.missing .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .gallery-instruction {
+      display: flex;
+      max-width: 850px;
+      margin: 45px auto 0;
+      padding: 24px 27px;
+      gap: 18px;
+      align-items: flex-start;
+      color: var(--charcoal);
+      background: var(--white);
+      border-left: 3px solid var(--gold);
+      box-shadow: 0 12px 35px rgba(40, 8, 15, 0.06);
+    }
+
+    .gallery-instruction > i {
+      margin-top: 4px;
+      color: var(--burgundy);
+      font-size: 1.2rem;
+    }
+
+    .gallery-instruction strong {
+      display: block;
+      margin-bottom: 5px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.25rem;
+    }
+
+    .gallery-instruction p {
+      font-size: 0.78rem;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      display: flex;
+      padding: 30px;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      background: rgba(18, 0, 5, 0.96);
+      opacity: 0;
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    }
+
+    .lightbox.open {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .lightbox-content {
+      position: relative;
+      display: flex;
+      width: min(1050px, 100%);
+      height: min(80vh, 750px);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      box-shadow: var(--shadow-dark);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -10px;
+      right: 0;
+      display: flex;
+      width: 45px;
+      height: 45px;
+      align-items: center;
+      justify-content: center;
+      color: var(--burgundy-dark);
+      background: var(--gold);
+      border-radius: 50%;
+      font-size: 1rem;
+    }
+
+    .lightbox-arrow {
+      position: fixed;
+      top: 50%;
+      display: flex;
+      width: 48px;
+      height: 48px;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(212, 169, 79, 0.3);
+      transform: translateY(-50%);
+    }
+
+    .lightbox-arrow:hover {
+      color: var(--burgundy-dark);
+      background: var(--gold);
+    }
+
+    .lightbox-prev {
+      left: 25px;
+    }
+
+    .lightbox-next {
+      right: 25px;
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      right: 0;
+      bottom: -5px;
+      left: 0;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .lightbox-caption span {
+      color: var(--gold-light);
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .lightbox-caption h3 {
+      margin-top: 3px;
+      font-size: 1.45rem;
+    }
+
+    .gallery-empty {
+      display: none;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .gallery-empty i {
+      margin-bottom: 16px;
+      color: var(--gold-dark);
+      font-size: 2.5rem;
+    }
+
+    .gallery-empty h3 {
+      font-size: 1.7rem;
+    }
+
+    @media (max-width: 900px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .portfolio-item.wide {
+        grid-column: span 1;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .inner-hero {
+        min-height: 480px;
+        padding: 150px 0 70px;
+      }
+
+      .gallery-filters {
+        justify-content: flex-start;
+      }
+
+      .filter-button {
+        flex: 1 1 calc(50% - 10px);
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 380px;
+      }
+
+      .portfolio-item.tall,
+      .portfolio-item.wide {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .portfolio-overlay {
+        opacity: 1;
+      }
+
+      .lightbox {
+        padding: 15px;
+      }
+
+      .lightbox-content {
+        height: 75vh;
+      }
+
+      .lightbox-close {
+        top: 5px;
+        right: 5px;
+      }
+
+      .lightbox-arrow {
+        top: auto;
+        bottom: 18px;
+        transform: none;
+      }
+
+      .lightbox-prev {
+        left: 18px;
+      }
+
+      .lightbox-next {
+        right: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="preloader" id="preloader">
+    <img src="images/logo.png" alt="TEFAD Enterprise Ltd logo">
+    <span>Preparing something exceptional...</span>
+  </div>
+
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Abuja Karu, Karu, Nigeria
+      </p>
+
+      <div class="top-contact">
+        <a href="tel:+2348154440684">
+          <i class="fa-solid fa-phone"></i>
+          +234 815 444 0684
+        </a>
+
+        <a href="mailto:tosinfaith4real@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          tosinfaith4real@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+
+        <div class="brand-text">
+          <strong>TEFAD</strong>
+          <span>Enterprise Ltd</span>
+        </div>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" id="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="booking.html">Book Us</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="booking.html" class="nav-cta">
+          Request a Quote
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="inner-hero">
+      <div class="container inner-hero-content">
+
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Gallery</span>
+        </div>
+
+        <h1>
+          A glimpse of the
+          <em>TEFAD experience.</em>
+        </h1>
+
+        <p>
+          Explore our catering, cakes, pastries, small chops,
+          decorations and memorable event experiences.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="container">
+
+        <div class="gallery-intro reveal">
+          <div class="section-tag">Our Portfolio</div>
+
+          <h2>
+            Created with passion.
+            <em>Presented with excellence.</em>
+          </h2>
+
+          <p>
+            Select a category to explore our work. Click any image to
+            view it in full screen.
+          </p>
+        </div>
+
+        <div class="gallery-filters reveal">
+          <button class="filter-button active" data-filter="all">
+            All
+          </button>
+
+          <button class="filter-button" data-filter="catering">
+            Catering
+          </button>
+
+          <button class="filter-button" data-filter="cakes">
+            Cakes
+          </button>
+
+          <button class="filter-button" data-filter="pastries">
+            Pastries
+          </button>
+
+          <button class="filter-button" data-filter="small-chops">
+            Small Chops
+          </button>
+
+          <button class="filter-button" data-filter="decoration">
+            Decoration
+          </button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+
+          <article
+            class="portfolio-item tall"
+            data-category="catering"
+            data-title="Premium Event Catering"
+          >
+            <img
+              src="images/gallery/catering-1.jpg"
+              alt="TEFAD premium event catering"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload catering-1.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Catering</span>
+              <h3>Premium Event Catering</h3>
+            </div>
+          </article>
+
+          <article
+            class="portfolio-item"
+            data-category="cakes"
+            data-title="Celebration Cake"
+          >
+            <img
+              src="images/gallery/cake-1.jpg"
+              alt="TEFAD celebration cake"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload cake-1.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Cakes</span>
+              <h3>Celebration Cake</h3>
+            </div>
+          </article>
+
+          <article
+            class="portfolio-item"
+            data-category="decoration"
+            data-title="Elegant Event Decoration"
+          >
+            <img
+              src="images/gallery/decoration-1.jpg"
+              alt="TEFAD elegant event decoration"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload decoration-1.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Decoration</span>
+              <h3>Elegant Event Decoration</h3>
+            </div>
+          </article>
+
+          <article
+            class="portfolio-item wide"
+            data-category="small-chops"
+            data-title="Fresh Small Chops Selection"
+          >
+            <img
+              src="images/gallery/small-chops-1.jpg"
+              alt="TEFAD fresh small chops selection"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload small-chops-1.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Small Chops</span>
+              <h3>Fresh Small Chops Selection</h3>
+            </div>
+          </article>
+
+          <article
+            class="portfolio-item"
+            data-category="pastries"
+            data-title="Freshly Baked Pastries"
+          >
+            <img
+              src="images/gallery/pastry-1.jpg"
+              alt="TEFAD freshly baked pastries"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload pastry-1.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Pastries</span>
+              <h3>Freshly Baked Pastries</h3>
+            </div>
+          </article>
+
+          <article
+            class="portfolio-item tall"
+            data-category="cakes"
+            data-title="Luxury Custom Cake"
+          >
+            <img
+              src="images/gallery/cake-2.jpg"
+              alt="TEFAD luxury custom cake"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload cake-2.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Cakes</span>
+              <h3>Luxury Custom Cake</h3>
+            </div>
+          </article>
+
+          <article
+            class="portfolio-item"
+            data-category="catering"
+            data-title="Beautiful Food Presentation"
+          >
+            <img
+              src="images/gallery/catering-2.jpg"
+              alt="TEFAD food presentation"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload catering-2.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Catering</span>
+              <h3>Beautiful Food Presentation</h3>
+            </div>
+          </article>
+
+          <article
+            class="portfolio-item"
+            data-category="decoration"
+            data-title="Beautiful Celebration Setup"
+          >
+            <img
+              src="images/gallery/decoration-2.jpg"
+              alt="TEFAD celebration decoration"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload decoration-2.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Decoration</span>
+              <h3>Beautiful Celebration Setup</h3>
+            </div>
+          </article>
+
+          <article
+            class="portfolio-item wide"
+            data-category="small-chops"
+            data-title="Party Small Chops Package"
+          >
+            <img
+              src="images/gallery/small-chops-2.jpg"
+              alt="TEFAD party small chops package"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload small-chops-2.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Small Chops</span>
+              <h3>Party Small Chops Package</h3>
+            </div>
+          </article>
+
+          <article
+            class="portfolio-item"
+            data-category="pastries"
+            data-title="TEFAD Pastry Selection"
+          >
+            <img
+              src="images/gallery/pastry-2.jpg"
+              alt="TEFAD pastry selection"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload pastry-2.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Pastries</span>
+              <h3>TEFAD Pastry Selection</h3>
+            </div>
+          </article>
+
+          <article
+            class="portfolio-item"
+            data-category="catering"
+            data-title="Special Occasion Menu"
+          >
+            <img
+              src="images/gallery/catering-3.jpg"
+              alt="TEFAD special occasion catering"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload catering-3.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Catering</span>
+              <h3>Special Occasion Menu</h3>
+            </div>
+          </article>
+
+          <article
+            class="portfolio-item"
+            data-category="cakes"
+            data-title="Elegant Birthday Cake"
+          >
+            <img
+              src="images/gallery/cake-3.jpg"
+              alt="TEFAD elegant birthday cake"
+            >
+
+            <div class="image-missing">
+              <i class="fa-solid fa-image"></i>
+              <span>Upload cake-3.jpg here</span>
+            </div>
+
+            <div class="portfolio-overlay">
+              <div class="portfolio-view">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+
+              <span>Cakes</span>
+              <h3>Elegant Birthday Cake</h3>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="gallery-empty" id="galleryEmpty">
+          <i class="fa-regular fa-images"></i>
+          <h3>No images available</h3>
+          <p>Images will be added to this category soon.</p>
+        </div>
+
+        <div class="gallery-instruction reveal">
+          <i class="fa-solid fa-circle-info"></i>
+
+          <div>
+            <strong>Easy Gallery Updates</strong>
+
+            <p>
+              You can replace these images anytime by uploading your
+              real TEFAD photographs using the same filenames. The
+              design, categories and full-screen viewer will continue
+              working automatically.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-overlay"></div>
+
+      <div class="container cta-content reveal">
+        <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+
+        <div>
+          <span>Inspired by our work?</span>
+          <h2>Let us create your own experience.</h2>
+
+          <p>
+            Complete our professional enquiry form and tell us about
+            your occasion.
+          </p>
+        </div>
+
+        <a href="booking.html" class="btn btn-gold">
+          Start Your Booking
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">
+          <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+        </a>
+
+        <p>
+          Premium catering, cakes, pastries and event services created
+          to make every occasion exceptional.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://wa.me/2348154440684"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Book Us</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Services</h3>
+        <a href="services.html">Catering</a>
+        <a href="services.html">Cakes & Pastries</a>
+        <a href="services.html">Small Chops</a>
+        <a href="services.html">Decoration</a>
+        <a href="services.html">Event Planning</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contact</h3>
+
+        <a href="tel:+2348154440684">
+          <i class="fa-solid fa-phone"></i>
+          +234 815 444 0684
+        </a>
+
+        <a href="tel:+2348036211935">
+          <i class="fa-solid fa-phone"></i>
+          +234 803 621 1935
+        </a>
+
+        <a href="mailto:tosinfaith4real@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          tosinfaith4real@gmail.com
+        </a>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Abuja Karu, Karu, Nigeria
+        </p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        &copy; 2026 TEFAD Enterprise Ltd. All rights reserved.
+      </p>
+
+      <p>Exceptional taste. Unforgettable moments.</p>
+    </div>
+  </footer>
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Gallery image viewer"
+  >
+    <div class="lightbox-content">
+      <img
+        src=""
+        alt=""
+        class="lightbox-image"
+        id="lightboxImage"
+      >
+
+      <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Close image viewer"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="lightbox-caption">
+        <span id="lightboxCategory"></span>
+        <h3 id="lightboxTitle"></h3>
+      </div>
+    </div>
+
+    <button
+      class="lightbox-arrow lightbox-prev"
+      id="lightboxPrev"
+      aria-label="Previous image"
+    >
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+    <button
+      class="lightbox-arrow lightbox-next"
+      id="lightboxNext"
+      aria-label="Next image"
+    >
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons =
+        document.querySelectorAll(".filter-button");
+
+      const portfolioItems =
+        Array.from(document.querySelectorAll(".portfolio-item"));
+
+      const galleryEmpty =
+        document.getElementById("galleryEmpty");
+
+      const lightbox =
+        document.getElementById("lightbox");
+
+      const lightboxImage =
+        document.getElementById("lightboxImage");
+
+      const lightboxCategory =
+        document.getElementById("lightboxCategory");
+
+      const lightboxTitle =
+        document.getElementById("lightboxTitle");
+
+      const lightboxClose =
+        document.getElementById("lightboxClose");
+
+      const lightboxPrevious =
+        document.getElementById("lightboxPrev");
+
+      const lightboxNext =
+        document.getElementById("lightboxNext");
+
+      let visibleItems = [...portfolioItems];
+      let currentImageIndex = 0;
+
+      portfolioItems.forEach((item) => {
+        const image = item.querySelector("img");
+
+        image.addEventListener("error", () => {
+          item.classList.add("missing");
+        });
+
+        if (image.complete && image.naturalWidth === 0) {
+          item.classList.add("missing");
+        }
+      });
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const selectedCategory =
+            button.dataset.filter;
+
+          filterButtons.forEach((filterButton) => {
+            filterButton.classList.remove("active");
+          });
+
+          button.classList.add("active");
+
+          visibleItems = portfolioItems.filter((item) => {
+            const shouldShow =
+              selectedCategory === "all" ||
+              item.dataset.category === selectedCategory;
+
+            item.classList.toggle("hidden", !shouldShow);
+
+            return shouldShow;
+          });
+
+          galleryEmpty.style.display =
+            visibleItems.length === 0 ? "block" : "none";
+        });
+      });
+
+      function openLightbox(item) {
+        if (item.classList.contains("missing")) return;
+
+        visibleItems = portfolioItems.filter(
+          (portfolioItem) =>
+            !portfolioItem.classList.contains("hidden") &&
+            !portfolioItem.classList.contains("missing")
+        );
+
+        currentImageIndex = visibleItems.indexOf(item);
+
+        updateLightbox();
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function updateLightbox() {
+        if (visibleItems.length === 0) return;
+
+        const currentItem =
+          visibleItems[currentImageIndex];
+
+        const image =
+          currentItem.querySelector("img");
+
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+
+        lightboxCategory.textContent =
+          currentItem.dataset.category.replace("-", " ");
+
+        lightboxTitle.textContent =
+          currentItem.dataset.title;
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      function showNextImage() {
+        currentImageIndex =
+          (currentImageIndex + 1) % visibleItems.length;
+
+        updateLightbox();
+      }
+
+      function showPreviousImage() {
+        currentImageIndex =
+          (currentImageIndex - 1 + visibleItems.length) %
+          visibleItems.length;
+
+        updateLightbox();
+      }
+
+      portfolioItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          openLightbox(item);
+        });
+      });
+
+      lightboxClose.addEventListener("click", closeLightbox);
+      lightboxNext.addEventListener("click", showNextImage);
+      lightboxPrevious.addEventListener(
+        "click",
+        showPreviousImage
+      );
+
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (!lightbox.classList.contains("open")) return;
+
+        if (event.key === "Escape") {
+          closeLightbox();
+        }
+
+        if (event.key === "ArrowRight") {
+          showNextImage();
+        }
+
+        if (event.key === "ArrowLeft") {
+          showPreviousImage();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

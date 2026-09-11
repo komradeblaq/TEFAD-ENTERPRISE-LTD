@@ -17,22 +17,19 @@
   <meta name="theme-color" content="#5b071b">
 
   <meta property="og:title" content="About TEFAD Enterprise Ltd">
+
   <meta
     property="og:description"
     content="Discover our commitment to exceptional food, professional service and unforgettable celebrations."
   >
+
   <meta property="og:image" content="images/logo.png">
   <meta property="og:type" content="website">
 
   <title>About Us | TEFAD Enterprise Ltd</title>
 
   <link rel="icon" href="images/logo.png" type="image/png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    The connection links for Google Fonts should not include
-    anything before the word link.
-  */ href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
@@ -59,9 +56,9 @@
         linear-gradient(
           90deg,
           rgba(39, 1, 11, 0.97),
-          rgba(70, 4, 22, 0.8)
+          rgba(70, 4, 22, 0.75)
         ),
-        url("images/about-hero.jpg") center/cover no-repeat;
+        url("images/hero.jpg") center/cover no-repeat;
     }
 
     .inner-hero::before {
@@ -139,8 +136,10 @@
       position: absolute;
       top: 0;
       left: 0;
+      display: block;
       width: 88%;
       height: 570px;
+      object-fit: cover;
       box-shadow: var(--shadow);
     }
 
@@ -148,8 +147,10 @@
       position: absolute;
       right: 0;
       bottom: 0;
+      display: block;
       width: 47%;
       height: 255px;
+      object-fit: cover;
       border: 9px solid var(--ivory);
       box-shadow: var(--shadow);
     }
@@ -205,8 +206,8 @@
     .founder-note {
       margin-top: 30px;
       padding: 25px 28px;
-      border-left: 3px solid var(--gold);
       background: var(--white);
+      border-left: 3px solid var(--gold);
       box-shadow: 0 10px 30px rgba(41, 9, 16, 0.06);
     }
 
@@ -271,8 +272,8 @@
       min-height: 325px;
       padding: 40px 30px;
       overflow: hidden;
-      border: 1px solid rgba(212, 169, 79, 0.22);
       background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(212, 169, 79, 0.22);
       transition:
         transform var(--transition),
         background var(--transition);
@@ -412,9 +413,11 @@
       min-height: 520px;
     }
 
-    .promise-visual .image-placeholder {
+    .promise-main-image {
+      display: block;
       width: 100%;
       height: 500px;
+      object-fit: cover;
       box-shadow: var(--shadow);
     }
 
@@ -501,7 +504,7 @@
         min-height: 445px;
       }
 
-      .promise-visual .image-placeholder {
+      .promise-main-image {
         height: 420px;
       }
 
@@ -607,19 +610,18 @@
       <div class="container story-grid">
 
         <div class="story-visual reveal">
-          <div class="story-main-image image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-user-chef"></i>
-              <span>Add a professional TEFAD team image</span>
-            </div>
-          </div>
 
-          <div class="story-small-image image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-utensils"></i>
-              <span>Add catering image</span>
-            </div>
-          </div>
+          <img
+            src="images/catering-1.jpg"
+            alt="TEFAD premium catering presentation"
+            class="story-main-image"
+          >
+
+          <img
+            src="images/cake-4.jpg"
+            alt="TEFAD custom celebration cake"
+            class="story-small-image"
+          >
 
           <div class="story-detail">
             <i class="fa-solid fa-star"></i>
@@ -681,6 +683,7 @@
         <div class="purpose-intro reveal">
           <div>
             <div class="section-tag light">Our Purpose</div>
+
             <h2>
               The principles guiding
               <em>everything we create.</em>
@@ -772,6 +775,7 @@
 
             <div>
               <h3>Excellence</h3>
+
               <p>
                 We pursue high standards in taste, appearance,
                 preparation, communication and delivery.
@@ -784,6 +788,7 @@
 
             <div>
               <h3>Creativity</h3>
+
               <p>
                 We develop thoughtful ideas that reflect each client's
                 personality, occasion and vision.
@@ -796,6 +801,7 @@
 
             <div>
               <h3>Integrity</h3>
+
               <p>
                 We communicate honestly, respect our agreements and
                 remain accountable for our work.
@@ -808,6 +814,7 @@
 
             <div>
               <h3>Customer Care</h3>
+
               <p>
                 We listen attentively and aim to make each customer's
                 experience easy, personal and satisfying.
@@ -820,6 +827,7 @@
 
             <div>
               <h3>Quality</h3>
+
               <p>
                 We prioritise suitable ingredients, careful preparation
                 and refined presentation.
@@ -832,6 +840,7 @@
 
             <div>
               <h3>Reliability</h3>
+
               <p>
                 Our clients can depend on us to plan carefully and
                 deliver every confirmed service professionally.
@@ -887,22 +896,26 @@
             </li>
           </ul>
 
-          <a href="booking.html" class="btn btn-dark" style="margin-top: 35px;">
+          <a
+            href="booking.html"
+            class="btn btn-dark"
+            style="margin-top: 35px;"
+          >
             Work With Us
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
 
         <div class="promise-visual reveal">
-          <div class="image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-camera"></i>
-              <span>Add a completed event image here</span>
-            </div>
-          </div>
+          <img
+            src="images/decoration-2.jpg"
+            alt="TEFAD completed event decoration"
+            class="promise-main-image"
+          >
 
           <div class="promise-quote">
             <i class="fa-solid fa-quote-left"></i>
+
             <p>
               Every detail matters because every celebration carries a
               special meaning.

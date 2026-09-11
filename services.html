@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Explore TEFAD Enterprise Ltd catering, cakes, pastries, small chops, event decoration and event planning services in Abuja Karu, Nigeria."
+  >
+
+  <meta name="author" content="TEFAD Enterprise Ltd">
+  <meta name="theme-color" content="#5b071b">
+
+  <meta property="og:title" content="Our Services | TEFAD Enterprise Ltd">
+  <meta
+    property="og:description"
+    content="Premium catering, baking and event services created for unforgettable occasions."
+  >
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:type" content="website">
+
+  <title>Our Services | TEFAD Enterprise Ltd</title>
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .inner-hero {
+      position: relative;
+      display: flex;
+      min-height: 560px;
+      padding: 180px 0 95px;
+      align-items: flex-end;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(39, 1, 11, 0.97),
+          rgba(73, 5, 23, 0.82)
+        ),
+        url("images/services-hero.jpg") center/cover no-repeat;
+    }
+
+    .inner-hero::before {
+      position: absolute;
+      top: -250px;
+      right: -120px;
+      width: 650px;
+      height: 650px;
+      border: 1px solid rgba(212, 169, 79, 0.17);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .inner-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      margin-bottom: 22px;
+      gap: 10px;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .breadcrumbs a {
+      color: var(--gold-light);
+    }
+
+    .breadcrumbs i {
+      font-size: 0.55rem;
+    }
+
+    .inner-hero h1 {
+      color: var(--white);
+      font-size: clamp(3.8rem, 8vw, 6.8rem);
+      font-weight: 600;
+    }
+
+    .inner-hero h1 em {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    .inner-hero p {
+      max-width: 680px;
+      margin-top: 22px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .service-intro {
+      background: var(--ivory);
+    }
+
+    .service-intro-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 85px;
+      align-items: center;
+    }
+
+    .service-intro-content > p {
+      margin: 24px 0 30px;
+    }
+
+    .intro-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .intro-point {
+      display: flex;
+      padding: 17px;
+      gap: 12px;
+      align-items: center;
+      background: var(--white);
+      border: 1px solid var(--light-grey);
+    }
+
+    .intro-point i {
+      display: flex;
+      min-width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      color: var(--burgundy);
+      background: rgba(212, 169, 79, 0.2);
+      border-radius: 50%;
+      font-size: 0.7rem;
+    }
+
+    .intro-point span {
+      color: var(--charcoal);
+      font-size: 0.77rem;
+      font-weight: 700;
+    }
+
+    .service-intro-visual {
+      position: relative;
+      min-height: 540px;
+    }
+
+    .service-intro-visual .image-placeholder {
+      width: 100%;
+      height: 510px;
+      box-shadow: var(--shadow);
+    }
+
+    .intro-badge {
+      position: absolute;
+      left: -30px;
+      bottom: 0;
+      width: 230px;
+      padding: 25px;
+      color: var(--white);
+      background: var(--burgundy);
+      border-bottom: 3px solid var(--gold);
+      box-shadow: var(--shadow);
+    }
+
+    .intro-badge i {
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-size: 1.5rem;
+    }
+
+    .intro-badge strong {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.4rem;
+    }
+
+    .intro-badge span {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.68rem;
+    }
+
+    .detailed-services {
+      background: var(--white);
+    }
+
+    .detailed-service {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 550px;
+      margin-bottom: 35px;
+      border: 1px solid var(--light-grey);
+      background: var(--white);
+      box-shadow: 0 14px 45px rgba(38, 10, 17, 0.07);
+    }
+
+    .detailed-service:last-child {
+      margin-bottom: 0;
+    }
+
+    .detailed-service.reverse .service-visual {
+      order: 2;
+    }
+
+    .detailed-service.reverse .service-information {
+      order: 1;
+    }
+
+    .service-visual {
+      position: relative;
+      min-height: 550px;
+    }
+
+    .service-visual.image-placeholder {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(91, 7, 27, 0.07),
+          rgba(212, 169, 79, 0.2)
+        ),
+        var(--cream);
+    }
+
+    .service-visual-label {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      left: 20px;
+      padding: 18px 22px;
+      color: var(--white);
+      background: rgba(50, 2, 14, 0.9);
+      backdrop-filter: blur(8px);
+    }
+
+    .service-visual-label span {
+      color: var(--gold-light);
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .service-visual-label strong {
+      display: block;
+      margin-top: 3px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.25rem;
+    }
+
+    .service-information {
+      display: flex;
+      padding: 55px;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service-title-row {
+      display: flex;
+      margin-bottom: 22px;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .service-title-row > span {
+      color: var(--gold-dark);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+    }
+
+    .service-title-row h2 {
+      font-size: clamp(2.3rem, 4vw, 3.5rem);
+    }
+
+    .service-information > p {
+      margin-bottom: 25px;
+      font-size: 0.88rem;
+    }
+
+    .includes-title {
+      margin-bottom: 14px;
+      color: var(--burgundy);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .service-includes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 11px 15px;
+    }
+
+    .service-includes li {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      color: var(--charcoal);
+      font-size: 0.76rem;
+    }
+
+    .service-includes i {
+      margin-top: 5px;
+      color: var(--gold-dark);
+      font-size: 0.58rem;
+    }
+
+    .service-information .btn {
+      align-self: flex-start;
+      margin-top: 32px;
+    }
+
+    .custom-service {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(212, 169, 79, 0.18),
+          transparent 30%
+        ),
+        var(--burgundy-dark);
+    }
+
+    .custom-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .custom-service h2 {
+      color: var(--white);
+    }
+
+    .custom-service h2 em {
+      color: var(--gold-light);
+    }
+
+    .custom-service p {
+      max-width: 730px;
+      margin-top: 20px;
+      color: rgba(255, 255, 255, 0.66);
+    }
+
+    .process-section {
+      background: var(--cream);
+    }
+
+    .process-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 55px;
+      gap: 20px;
+    }
+
+    .process-card {
+      position: relative;
+      z-index: 2;
+      padding: 35px 25px;
+      background: var(--white);
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 12px 35px rgba(40, 8, 15, 0.06);
+    }
+
+    .process-number {
+      display: flex;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 23px;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      background: var(--burgundy);
+      border-radius: 50%;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.25rem;
+    }
+
+    .process-card h3 {
+      margin-bottom: 11px;
+      font-size: 1.45rem;
+    }
+
+    .process-card p {
+      font-size: 0.79rem;
+    }
+
+    .service-note {
+      margin-top: 45px;
+      padding: 25px 30px;
+      color: var(--burgundy-dark);
+      background: rgba(212, 169, 79, 0.16);
+      border-left: 3px solid var(--gold);
+      font-size: 0.82rem;
+    }
+
+    .service-note strong {
+      color: var(--burgundy);
+    }
+
+    @media (max-width: 950px) {
+      .service-intro-grid,
+      .detailed-service {
+        grid-template-columns: 1fr;
+      }
+
+      .detailed-service.reverse .service-visual {
+        order: 1;
+      }
+
+      .detailed-service.reverse .service-information {
+        order: 2;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .custom-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .inner-hero {
+        min-height: 480px;
+        padding: 150px 0 70px;
+      }
+
+      .intro-points,
+      .service-includes,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-intro-visual {
+        min-height: 440px;
+      }
+
+      .service-intro-visual .image-placeholder {
+        height: 410px;
+      }
+
+      .intro-badge {
+        left: 0;
+      }
+
+      .service-visual {
+        min-height: 400px;
+      }
+
+      .service-information {
+        padding: 38px 24px;
+      }
+
+      .service-title-row {
+        align-items: flex-start;
+      }
+
+      .custom-grid .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="preloader" id="preloader">
+    <img src="images/logo.png" alt="TEFAD Enterprise Ltd logo">
+    <span>Preparing something exceptional...</span>
+  </div>
+
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Abuja Karu, Karu, Nigeria
+      </p>
+
+      <div class="top-contact">
+        <a href="tel:+2348154440684">
+          <i class="fa-solid fa-phone"></i>
+          +234 815 444 0684
+        </a>
+
+        <a href="mailto:tosinfaith4real@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          tosinfaith4real@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container nav-container">
+
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+
+        <div class="brand-text">
+          <strong>TEFAD</strong>
+          <span>Enterprise Ltd</span>
+        </div>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" id="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Book Us</a>
+        <a href="contact.html">Contact</a>
+
+        <a href="booking.html" class="nav-cta">
+          Request a Quote
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="inner-hero">
+      <div class="container inner-hero-content">
+
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Services</span>
+        </div>
+
+        <h1>
+          Services created for
+          <em>exceptional occasions.</em>
+        </h1>
+
+        <p>
+          From food and cakes to complete event coordination, every
+          TEFAD service is carefully planned around your needs.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section service-intro">
+      <div class="container service-intro-grid">
+
+        <div class="service-intro-content reveal">
+          <div class="section-tag">Our Expertise</div>
+
+          <h2>
+            Everything you need for a
+            <em>memorable experience.</em>
+          </h2>
+
+          <p>
+            Whether you need one specialised service or complete event
+            support, TEFAD provides professional solutions tailored to
+            your occasion, preferences and number of guests.
+          </p>
+
+          <div class="intro-points">
+            <div class="intro-point">
+              <i class="fa-solid fa-check"></i>
+              <span>Personalised planning</span>
+            </div>
+
+            <div class="intro-point">
+              <i class="fa-solid fa-check"></i>
+              <span>Quality ingredients</span>
+            </div>
+
+            <div class="intro-point">
+              <i class="fa-solid fa-check"></i>
+              <span>Elegant presentation</span>
+            </div>
+
+            <div class="intro-point">
+              <i class="fa-solid fa-check"></i>
+              <span>Professional delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-intro-visual reveal">
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <i class="fa-solid fa-utensils"></i>
+              <span>Add a premium service image here</span>
+            </div>
+          </div>
+
+          <div class="intro-badge">
+            <i class="fa-solid fa-star"></i>
+            <strong>Designed Around You</strong>
+            <span>
+              Every service is tailored to your occasion.
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section detailed-services">
+      <div class="container">
+
+        <div class="section-heading centered reveal">
+          <div class="section-tag">Explore Our Services</div>
+
+          <h2>
+            Select the service that
+            <em>fits your vision.</em>
+          </h2>
+
+          <p>
+            Click the enquiry button under any service to open a
+            professional form prepared specifically for that request.
+          </p>
+        </div>
+
+        <!-- Catering -->
+        <article class="detailed-service reveal">
+          <div class="service-visual image-placeholder">
+            <div class="placeholder-content">
+              <i class="fa-solid fa-bowl-food"></i>
+              <span>Add catering image</span>
+            </div>
+
+            <div class="service-visual-label">
+              <span>Premium Food Service</span>
+              <strong>Catering for every celebration</strong>
+            </div>
+          </div>
+
+          <div class="service-information">
+            <div class="service-title-row">
+              <span>01</span>
+              <h2>Catering Services</h2>
+            </div>
+
+            <p>
+              Carefully prepared meals, professional service and
+              beautiful food presentation for private and corporate
+              occasions of different sizes.
+            </p>
+
+            <div class="includes-title">Suitable for</div>
+
+            <ul class="service-includes">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Weddings
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Birthday celebrations
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Corporate functions
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Family gatherings
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Religious events
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Private dining
+              </li>
+            </ul>
+
+            <a
+              href="booking.html?service=Catering"
+              class="btn btn-dark"
+            >
+              Enquire About Catering
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Cakes -->
+        <article class="detailed-service reverse reveal">
+          <div class="service-visual image-placeholder">
+            <div class="placeholder-content">
+              <i class="fa-solid fa-cake-candles"></i>
+              <span>Add custom cake image</span>
+            </div>
+
+            <div class="service-visual-label">
+              <span>Custom Baking</span>
+              <strong>Beautifully crafted for your moment</strong>
+            </div>
+          </div>
+
+          <div class="service-information">
+            <div class="service-title-row">
+              <span>02</span>
+              <h2>Cakes & Pastries</h2>
+            </div>
+
+            <p>
+              Beautiful custom cakes and freshly prepared pastries made
+              to complement the theme and significance of your special
+              occasion.
+            </p>
+
+            <div class="includes-title">Available options</div>
+
+            <ul class="service-includes">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Wedding cakes
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Birthday cakes
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Anniversary cakes
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Cupcakes
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Celebration pastries
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Corporate cake orders
+              </li>
+            </ul>
+
+            <a
+              href="booking.html?service=Cakes and Pastries"
+              class="btn btn-dark"
+            >
+              Order Cakes & Pastries
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Small Chops -->
+        <article class="detailed-service reveal">
+          <div class="service-visual image-placeholder">
+            <div class="placeholder-content">
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <span>Add small chops image</span>
+            </div>
+
+            <div class="service-visual-label">
+              <span>Fresh Finger Foods</span>
+              <strong>Delightful bites for your guests</strong>
+            </div>
+          </div>
+
+          <div class="service-information">
+            <div class="service-title-row">
+              <span>03</span>
+              <h2>Small Chops</h2>
+            </div>
+
+            <p>
+              Fresh, tasty and neatly presented finger foods suitable
+              for celebrations, meetings, private orders and event
+              packages.
+            </p>
+
+            <div class="includes-title">Popular selections</div>
+
+            <ul class="service-includes">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Samosas
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Spring rolls
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Puff-puff
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Spiced chicken
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Event portions
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Custom packages
+              </li>
+            </ul>
+
+            <a
+              href="booking.html?service=Small Chops"
+              class="btn btn-dark"
+            >
+              Order Small Chops
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Decoration -->
+        <article class="detailed-service reverse reveal">
+          <div class="service-visual image-placeholder">
+            <div class="placeholder-content">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span>Add event decoration image</span>
+            </div>
+
+            <div class="service-visual-label">
+              <span>Beautiful Environments</span>
+              <strong>Spaces transformed with elegance</strong>
+            </div>
+          </div>
+
+          <div class="service-information">
+            <div class="service-title-row">
+              <span>04</span>
+              <h2>Event Decoration</h2>
+            </div>
+
+            <p>
+              Creative decoration concepts designed to transform your
+              venue and reflect the mood, colour and personality of
+              your celebration.
+            </p>
+
+            <div class="includes-title">Decoration services</div>
+
+            <ul class="service-includes">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Wedding decoration
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Birthday decoration
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Table styling
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Backdrop design
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Corporate styling
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Intimate setups
+              </li>
+            </ul>
+
+            <a
+              href="booking.html?service=Event Decoration"
+              class="btn btn-dark"
+            >
+              Request Decoration Quote
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Event Planning -->
+        <article class="detailed-service reveal">
+          <div class="service-visual image-placeholder">
+            <div class="placeholder-content">
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>Add event planning image</span>
+            </div>
+
+            <div class="service-visual-label">
+              <span>Professional Coordination</span>
+              <strong>Your event carefully managed</strong>
+            </div>
+          </div>
+
+          <div class="service-information">
+            <div class="service-title-row">
+              <span>05</span>
+              <h2>Event Planning</h2>
+            </div>
+
+            <p>
+              Thoughtful event planning and coordination that reduces
+              stress, keeps important details organised and allows you
+              to enjoy your celebration.
+            </p>
+
+            <div class="includes-title">Planning support</div>
+
+            <ul class="service-includes">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Event consultation
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Timeline planning
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Vendor coordination
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Guest management
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                On-site coordination
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Complete event support
+              </li>
+            </ul>
+
+            <a
+              href="booking.html?service=Event Planning"
+              class="btn btn-dark"
+            >
+              Plan Your Event
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Corporate -->
+        <article class="detailed-service reverse reveal">
+          <div class="service-visual image-placeholder">
+            <div class="placeholder-content">
+              <i class="fa-solid fa-briefcase"></i>
+              <span>Add corporate event image</span>
+            </div>
+
+            <div class="service-visual-label">
+              <span>Business Hospitality</span>
+              <strong>Professional service for organisations</strong>
+            </div>
+          </div>
+
+          <div class="service-information">
+            <div class="service-title-row">
+              <span>06</span>
+              <h2>Corporate Events</h2>
+            </div>
+
+            <p>
+              Professional catering and event support for organisations
+              that require dependable service and polished
+              presentation.
+            </p>
+
+            <div class="includes-title">Suitable for</div>
+
+            <ul class="service-includes">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Business meetings
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Product launches
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Conferences
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Staff celebrations
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Training sessions
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                Official receptions
+              </li>
+            </ul>
+
+            <a
+              href="booking.html?service=Corporate Event"
+              class="btn btn-dark"
+            >
+              Contact Our Team
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <div class="service-note reveal">
+          <strong>Please note:</strong>
+          Menu options, designs, quantities, delivery arrangements and
+          prices depend on your selected service and event
+          requirements. Complete the enquiry form to receive a
+          personalised quotation.
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section custom-service">
+      <div class="container custom-grid reveal">
+
+        <div>
+          <div class="section-tag light">Custom Requests</div>
+
+          <h2>
+            Cannot find exactly what
+            <em>you need?</em>
+          </h2>
+
+          <p>
+            Tell us about your idea. We will review your request and
+            recommend a suitable service or personalised package.
+          </p>
+        </div>
+
+        <a
+          href="booking.html?service=Custom Request"
+          class="btn btn-gold"
+        >
+          Send Custom Request
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="container">
+
+        <div class="section-heading centered reveal">
+          <div class="section-tag">How It Works</div>
+
+          <h2>
+            A simple and professional
+            <em>booking process.</em>
+          </h2>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-card reveal">
+            <div class="process-number">01</div>
+            <h3>Select a Service</h3>
+            <p>
+              Choose the service that best matches your request or
+              occasion.
+            </p>
+          </article>
+
+          <article class="process-card reveal">
+            <div class="process-number">02</div>
+            <h3>Complete the Form</h3>
+            <p>
+              Provide the important details needed to understand your
+              request.
+            </p>
+          </article>
+
+          <article class="process-card reveal">
+            <div class="process-number">03</div>
+            <h3>Send to WhatsApp</h3>
+            <p>
+              Your information will be arranged professionally and sent
+              directly to TEFAD.
+            </p>
+          </article>
+
+          <article class="process-card reveal">
+            <div class="process-number">04</div>
+            <h3>Receive a Response</h3>
+            <p>
+              Our team will discuss availability, recommendations and
+              your quotation.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-overlay"></div>
+
+      <div class="container cta-content reveal">
+        <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+
+        <div>
+          <span>Your occasion starts here</span>
+          <h2>Let us create something exceptional.</h2>
+
+          <p>
+            Complete our professional enquiry form and speak directly
+            with TEFAD on WhatsApp.
+          </p>
+        </div>
+
+        <a href="booking.html" class="btn btn-gold">
+          Start Your Booking
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">
+          <img src="images/logo.png" alt="TEFAD Enterprise Ltd">
+        </a>
+
+        <p>
+          Premium catering, cakes, pastries and event services created
+          to make every occasion exceptional.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://wa.me/2348154440684"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Book Us</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Services</h3>
+        <a href="services.html">Catering</a>
+        <a href="services.html">Cakes & Pastries</a>
+        <a href="services.html">Small Chops</a>
+        <a href="services.html">Decoration</a>
+        <a href="services.html">Event Planning</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contact</h3>
+
+        <a href="tel:+2348154440684">
+          <i class="fa-solid fa-phone"></i>
+          +234 815 444 0684
+        </a>
+
+        <a href="tel:+2348036211935">
+          <i class="fa-solid fa-phone"></i>
+          +234 803 621 1935
+        </a>
+
+        <a href="mailto:tosinfaith4real@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          tosinfaith4real@gmail.com
+        </a>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Abuja Karu, Karu, Nigeria
+        </p>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        &copy; 2026 TEFAD Enterprise Ltd. All rights reserved.
+      </p>
+
+      <p>Exceptional taste. Unforgettable moments.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -54,9 +54,9 @@
         linear-gradient(
           90deg,
           rgba(39, 1, 11, 0.97),
-          rgba(73, 5, 23, 0.82)
+          rgba(73, 5, 23, 0.75)
         ),
-        url("images/services-hero.jpg") center/cover no-repeat;
+        url("images/hero.jpg") center/cover no-repeat;
     }
 
     .inner-hero::before {
@@ -166,9 +166,11 @@
       min-height: 540px;
     }
 
-    .service-intro-visual .image-placeholder {
+    .service-intro-image {
+      display: block;
       width: 100%;
       height: 510px;
+      object-fit: cover;
       box-shadow: var(--shadow);
     }
 
@@ -210,12 +212,13 @@
       grid-template-columns: 1fr 1fr;
       min-height: 550px;
       margin-bottom: 35px;
-      border: 1px solid var(--light-grey);
+      overflow: hidden;
       background: var(--white);
+      border: 1px solid var(--light-grey);
       box-shadow: 0 14px 45px rgba(38, 10, 17, 0.07);
     }
 
-    .detailed-service:last-child {
+    .detailed-service:last-of-type {
       margin-bottom: 0;
     }
 
@@ -230,16 +233,33 @@
     .service-visual {
       position: relative;
       min-height: 550px;
+      overflow: hidden;
+      background: var(--cream);
     }
 
-    .service-visual.image-placeholder {
+    .service-visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 550px;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .detailed-service:hover .service-visual img {
+      transform: scale(1.05);
+    }
+
+    .service-visual::after {
+      position: absolute;
+      inset: 0;
       background:
         linear-gradient(
-          145deg,
-          rgba(91, 7, 27, 0.07),
-          rgba(212, 169, 79, 0.2)
-        ),
-        var(--cream);
+          transparent 45%,
+          rgba(38, 1, 10, 0.42)
+        );
+      content: "";
+      pointer-events: none;
     }
 
     .service-visual-label {
@@ -247,6 +267,7 @@
       right: 20px;
       bottom: 20px;
       left: 20px;
+      z-index: 2;
       padding: 18px 22px;
       color: var(--white);
       background: rgba(50, 2, 14, 0.9);
@@ -331,6 +352,19 @@
       margin-top: 32px;
     }
 
+    .service-note {
+      margin-top: 45px;
+      padding: 25px 30px;
+      color: var(--burgundy-dark);
+      background: rgba(212, 169, 79, 0.16);
+      border-left: 3px solid var(--gold);
+      font-size: 0.82rem;
+    }
+
+    .service-note strong {
+      color: var(--burgundy);
+    }
+
     .custom-service {
       position: relative;
       overflow: hidden;
@@ -369,7 +403,6 @@
     }
 
     .process-grid {
-      position: relative;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       margin-top: 55px;
@@ -377,8 +410,6 @@
     }
 
     .process-card {
-      position: relative;
-      z-index: 2;
       padding: 35px 25px;
       background: var(--white);
       border-top: 3px solid var(--gold);
@@ -406,19 +437,6 @@
 
     .process-card p {
       font-size: 0.79rem;
-    }
-
-    .service-note {
-      margin-top: 45px;
-      padding: 25px 30px;
-      color: var(--burgundy-dark);
-      background: rgba(212, 169, 79, 0.16);
-      border-left: 3px solid var(--gold);
-      font-size: 0.82rem;
-    }
-
-    .service-note strong {
-      color: var(--burgundy);
     }
 
     @media (max-width: 950px) {
@@ -462,7 +480,7 @@
         min-height: 440px;
       }
 
-      .service-intro-visual .image-placeholder {
+      .service-intro-image {
         height: 410px;
       }
 
@@ -470,8 +488,10 @@
         left: 0;
       }
 
-      .service-visual {
+      .service-visual,
+      .service-visual img {
         min-height: 400px;
+        height: 400px;
       }
 
       .service-information {
@@ -621,16 +641,16 @@
         </div>
 
         <div class="service-intro-visual reveal">
-          <div class="image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-utensils"></i>
-              <span>Add a premium service image here</span>
-            </div>
-          </div>
+          <img
+            src="images/catering-1.jpg"
+            alt="TEFAD premium catering service"
+            class="service-intro-image"
+          >
 
           <div class="intro-badge">
             <i class="fa-solid fa-star"></i>
             <strong>Designed Around You</strong>
+
             <span>
               Every service is tailored to your occasion.
             </span>
@@ -657,13 +677,12 @@
           </p>
         </div>
 
-        <!-- Catering -->
         <article class="detailed-service reveal">
-          <div class="service-visual image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-bowl-food"></i>
-              <span>Add catering image</span>
-            </div>
+          <div class="service-visual">
+            <img
+              src="images/catering-2.jpg"
+              alt="TEFAD catering service"
+            >
 
             <div class="service-visual-label">
               <span>Premium Food Service</span>
@@ -690,22 +709,27 @@
                 <i class="fa-solid fa-circle-check"></i>
                 Weddings
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Birthday celebrations
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Corporate functions
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Family gatherings
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Religious events
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Private dining
@@ -722,13 +746,12 @@
           </div>
         </article>
 
-        <!-- Cakes -->
         <article class="detailed-service reverse reveal">
-          <div class="service-visual image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-cake-candles"></i>
-              <span>Add custom cake image</span>
-            </div>
+          <div class="service-visual">
+            <img
+              src="images/cake-7.jpg"
+              alt="TEFAD custom cake and pastry service"
+            >
 
             <div class="service-visual-label">
               <span>Custom Baking</span>
@@ -755,22 +778,27 @@
                 <i class="fa-solid fa-circle-check"></i>
                 Wedding cakes
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Birthday cakes
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Anniversary cakes
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Cupcakes
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Celebration pastries
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Corporate cake orders
@@ -778,7 +806,7 @@
             </ul>
 
             <a
-              href="booking.html?service=Cakes and Pastries"
+              href="booking.html?service=Cakes%20and%20Pastries"
               class="btn btn-dark"
             >
               Order Cakes & Pastries
@@ -787,13 +815,12 @@
           </div>
         </article>
 
-        <!-- Small Chops -->
         <article class="detailed-service reveal">
-          <div class="service-visual image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-champagne-glasses"></i>
-              <span>Add small chops image</span>
-            </div>
+          <div class="service-visual">
+            <img
+              src="images/small-chops-2.jpg"
+              alt="TEFAD small chops service"
+            >
 
             <div class="service-visual-label">
               <span>Fresh Finger Foods</span>
@@ -820,22 +847,27 @@
                 <i class="fa-solid fa-circle-check"></i>
                 Samosas
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Spring rolls
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Puff-puff
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Spiced chicken
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Event portions
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Custom packages
@@ -843,7 +875,7 @@
             </ul>
 
             <a
-              href="booking.html?service=Small Chops"
+              href="booking.html?service=Small%20Chops"
               class="btn btn-dark"
             >
               Order Small Chops
@@ -852,13 +884,12 @@
           </div>
         </article>
 
-        <!-- Decoration -->
         <article class="detailed-service reverse reveal">
-          <div class="service-visual image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-              <span>Add event decoration image</span>
-            </div>
+          <div class="service-visual">
+            <img
+              src="images/decoration-2.jpg"
+              alt="TEFAD event decoration service"
+            >
 
             <div class="service-visual-label">
               <span>Beautiful Environments</span>
@@ -885,22 +916,27 @@
                 <i class="fa-solid fa-circle-check"></i>
                 Wedding decoration
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Birthday decoration
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Table styling
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Backdrop design
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Corporate styling
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Intimate setups
@@ -908,7 +944,7 @@
             </ul>
 
             <a
-              href="booking.html?service=Event Decoration"
+              href="booking.html?service=Event%20Decoration"
               class="btn btn-dark"
             >
               Request Decoration Quote
@@ -917,13 +953,12 @@
           </div>
         </article>
 
-        <!-- Event Planning -->
         <article class="detailed-service reveal">
-          <div class="service-visual image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-calendar-check"></i>
-              <span>Add event planning image</span>
-            </div>
+          <div class="service-visual">
+            <img
+              src="images/catering-3.jpg"
+              alt="TEFAD professional event planning"
+            >
 
             <div class="service-visual-label">
               <span>Professional Coordination</span>
@@ -950,22 +985,27 @@
                 <i class="fa-solid fa-circle-check"></i>
                 Event consultation
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Timeline planning
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Vendor coordination
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Guest management
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 On-site coordination
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Complete event support
@@ -973,7 +1013,7 @@
             </ul>
 
             <a
-              href="booking.html?service=Event Planning"
+              href="booking.html?service=Event%20Planning"
               class="btn btn-dark"
             >
               Plan Your Event
@@ -982,13 +1022,12 @@
           </div>
         </article>
 
-        <!-- Corporate -->
         <article class="detailed-service reverse reveal">
-          <div class="service-visual image-placeholder">
-            <div class="placeholder-content">
-              <i class="fa-solid fa-briefcase"></i>
-              <span>Add corporate event image</span>
-            </div>
+          <div class="service-visual">
+            <img
+              src="images/catering-1.jpg"
+              alt="TEFAD corporate catering service"
+            >
 
             <div class="service-visual-label">
               <span>Business Hospitality</span>
@@ -1015,22 +1054,27 @@
                 <i class="fa-solid fa-circle-check"></i>
                 Business meetings
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Product launches
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Conferences
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Staff celebrations
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Training sessions
               </li>
+
               <li>
                 <i class="fa-solid fa-circle-check"></i>
                 Official receptions
@@ -1038,7 +1082,7 @@
             </ul>
 
             <a
-              href="booking.html?service=Corporate Event"
+              href="booking.html?service=Corporate%20Event"
               class="btn btn-dark"
             >
               Contact Our Team
@@ -1076,7 +1120,7 @@
         </div>
 
         <a
-          href="booking.html?service=Custom Request"
+          href="booking.html?service=Custom%20Request"
           class="btn btn-gold"
         >
           Send Custom Request
@@ -1103,6 +1147,7 @@
           <article class="process-card reveal">
             <div class="process-number">01</div>
             <h3>Select a Service</h3>
+
             <p>
               Choose the service that best matches your request or
               occasion.
@@ -1112,6 +1157,7 @@
           <article class="process-card reveal">
             <div class="process-number">02</div>
             <h3>Complete the Form</h3>
+
             <p>
               Provide the important details needed to understand your
               request.
@@ -1121,6 +1167,7 @@
           <article class="process-card reveal">
             <div class="process-number">03</div>
             <h3>Send to WhatsApp</h3>
+
             <p>
               Your information will be arranged professionally and sent
               directly to TEFAD.
@@ -1130,6 +1177,7 @@
           <article class="process-card reveal">
             <div class="process-number">04</div>
             <h3>Receive a Response</h3>
+
             <p>
               Our team will discuss availability, recommendations and
               your quotation.

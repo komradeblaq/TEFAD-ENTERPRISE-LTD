@@ -2089,3 +2089,32 @@ p {
     transform: none;
   }
 }
+
+.main-image,
+.small-image,
+.experience-main-image,
+.gallery-item img {
+  object-fit: cover;
+}
+
+.experience-main-image {
+  width: 100%;
+  height: 570px;
+  box-shadow: var(--shadow-dark);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+@media (max-width: 620px) {
+  .experience-main-image {
+    height: 420px;
+  }
+}
